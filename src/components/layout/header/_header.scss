@@ -1,10 +1,11 @@
 .header {
+    padding-bottom: $xs-size;
     border-bottom: 1px solid $yellow;
 }
 
 .header__container, .header__title-section, .header__content-section,
-.header__content-section__site-link-wrapper, .header__content-section__site-link,
-.header__content-section__social-link-wrapper, .header__content-section__social-link-wrapper
+.header__content-section__site-link-wrapper, .header__content-section__social-link-wrapper, 
+.header__content-section__social-link-wrapper
 {
     display: flex;
     flex-direction: row;
@@ -24,16 +25,21 @@
 .header__title-section__title {
     margin: 0;
     font-weight: 400;
+    font-size: $xl-size;
 }
 
 .header__title-section__subtitle {
     margin: 0;
     font-weight: 100;
+    font-size: $s-size;
+    letter-spacing: $xs-size;
+    color: $light-gray;
 }
 
 .header__title-section__logo {
-    width: 10rem;
-    height: auto;
+    width: 5rem;
+    height: 5rem;
+    align-self: center;
 }
 
 
@@ -51,6 +57,15 @@
 .header__content-section__site-link-wrapper {
     padding: 0 $l-size;
     align-items: center;
+}
+
+.header__content-section__site-link {
+    text-decoration: none;
+    color: $dark-gray;
+}
+
+.header__content-section__site-link:active {
+    color: $yellow;
 }
 
 .social-link-icon {

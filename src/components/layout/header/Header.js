@@ -1,5 +1,5 @@
 import React from 'react';
-//import SiteLogo from './../../../assets/imgs/site-logo.png';
+import SiteLogo from './../../../assets/imgs/site-logo.png';
 import GithubIcon from './../../../assets/social-icons/github.png';
 import LinkedInIcon from './../../../assets/social-icons/linked-in.png';
 import EmailIcon from './../../../assets/social-icons/email.png';
@@ -12,7 +12,7 @@ export default (props) => (
                     <h1 className="header__title-section__title">JOSH LEE</h1>
                     <p className="header__title-section__subtitle">CREATIVE DEVELOPER</p>
                 </div>
-                <img className="header__title-section__logo" src="" alt="header logo"/>
+                <img className="header__title-section__logo" src={SiteLogo} alt="header logo"/>
             </div>
             <div className="header__content-section">
                 <div className="header__content-section__site-link-wrapper">

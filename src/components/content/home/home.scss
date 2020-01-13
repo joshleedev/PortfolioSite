@@ -1,0 +1,24 @@
+.home-content {
+    padding: 15rem 10rem 10rem 10rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.home-content__text-block {
+    flex-basis: 60%
+}
+
+.home-content__text-block__title__wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.home-content__text-block__title-highlight {
+    padding-left: $xs-size;
+    color: $yellow;
+}
+
+.home-content__image {
+    flex-basis: 40%;
+    width: $xl-size;
+}

@@ -1,20 +1,26 @@
 import React from 'react';
-import CodingIcon from '../../../assets/imgs/coding-icon.png';
+import CodingIcon from '../../../assets/imgs/coding-icon-alt.png';
 
 export default () => (
     <div className="home-content">
         <div className="home-content__text-block">
-            <h3 className="home-content__text-block__title">A little about me...</h3>
+            <div className="home-content__text-block__title__wrapper">
+                <h3 className="home-content__text-block__title">A little</h3>
+                <h3 className="home-content__text-block__title-highlight">about me...</h3>
+            </div>
             <p className="home-content__text-block__body">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-                pariatur. Excepteur sint occaecat cupidatat non proident, 
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                A creative graduate of computing science, passionate for technology and problem solving.
+            </p>
+            <p className="home-content__text-block__body"> 
+                Enthused to gain further experience as a developer within a creative industry; being exposed to modern web technologies and furthering my skillset.
+            </p>
+            <p className="home-content__text-block__body">
+                Currently looking for a junior role with aspirations of becoming a fully-fledged full stack developer.
+            </p>
+            <p className="home-content__text-block__body">
+                Interested to learn more? Check out my Blog or Projects sections or feel free to get in contact.
             </p>
         </div>
-            <img className="home-content__image" src={CodingIcon} alt="coding-logo"/>
+        <img className="home-content__image" src={CodingIcon} alt="coding-logo"/>
     </div>
 );
