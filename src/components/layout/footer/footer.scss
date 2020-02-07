@@ -1,0 +1,37 @@
+.footer-content {
+    position: relative;
+    background: $green;
+    color: $light-gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20rem;
+}
+
+.reset-button {
+    position: absolute;
+    top: -13%;
+}
+
+.reset-img {
+    width: $xl-size;
+}
+
+.footer-links-wrapper {
+    padding: $l-size 0 $s-size 0;
+}
+
+.footer-link {
+    width: $xl-size;
+    height: auto;
+    padding: 0 $xs-size;
+}
+
+.footer-signature-wrapper {
+    display: flex;
+}
+
+.footer-signature {
+    padding-right: $xs-size;
+}

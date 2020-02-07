@@ -6,14 +6,11 @@ body {
     font-family: $body-font;
     font-size: $m-size;
     color: $dark-gray;
-    padding: 0 $m-size;
+    padding: 0;
+    margin: 0;
 }
 
-a {
-    cursor: pointer;
-}
-
-button {
+a, button {
     cursor: pointer;
 }
 

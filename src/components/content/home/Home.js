@@ -2,7 +2,7 @@ import React from 'react';
 import CodingIcon from '../../../assets/imgs/coding-icon-alt.png';
 
 export default () => (
-    <div className="home-content">
+    <div id="home-content" className="home-content">
         <div className="home-content__text-block">
             <div className="home-content__text-block__title__wrapper">
                 <h3 className="home-content__text-block__title">A little</h3>

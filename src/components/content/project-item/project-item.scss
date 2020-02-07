@@ -1,0 +1,138 @@
+.project-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    color: white;
+    border: 1px solid white;
+    transition: all 0.2s ease-in-out;
+}
+
+.project-wrapper:hover {
+    border: 1px solid $yellow;
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.project-img {
+    background-size: cover;
+    width: 30rem;
+    height: 18rem;
+    transition: filter .5s ease-in-out;
+    filter: blur(0px);
+}
+
+.project-img:hover {
+    filter: blur(1px);
+}
+
+.project-overlay {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $dark-gray;
+    opacity: 80%;
+    width: 100%; 
+}
+
+.project-title {
+    position: relative;
+    top: 10%;
+    padding-bottom: 0;
+}
+
+.project-tech {
+    position: relative;
+}
+
+.project-view {
+    position: relative;
+    top: 60%;
+    width: 25%;
+    background: none;
+    color: $yellow;
+}
+
+//Modal Styling
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    width: 60rem;
+    height: 70rem;
+}
+
+.modal-img-wrapper {
+    position: relative;
+    width: inherit;
+    height: 35rem;
+}
+
+.modal-img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+}
+
+.modal-img-buttons {
+    position: absolute;
+    top: 45%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.modal-img-buttons img {
+    width: $l-size;
+}
+
+.modal-wrapper {
+    padding: 0;
+}
+
+.modal-title-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    width: inherit;
+    height: auto;
+    align-items: baseline;
+    background-color: $light-gray;
+}
+
+.modal-title {
+    margin: 0;
+    color: white;
+    background-color: $dark-gray;
+    padding: $xs-size $m-size $xs-size $m-size;
+}
+
+.modal-stack {
+    margin: 0;
+    color: $dark-gray;
+    padding: $xs-size $m-size $xs-size $m-size;
+}
+
+.modal-body-wrapper {
+    padding: $m-size;
+}
+
+.github-wrapper {
+    display: flex;
+    flex-direction: row;
+    padding: 0 $m-size;
+}
+
+.github-icon {
+    width: $xxl-size;
+    align-self: center;
+    padding-right: $s-size;
+}
+
+#test {
+    background: $dark-gray  ;
+}

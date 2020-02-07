@@ -1,39 +1,66 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
+import { HashLink as NavLink } from 'react-router-hash-link';
+
+//Icon Imports
 import SiteLogo from './../../../assets/imgs/site-logo.png';
 import GithubIcon from './../../../assets/social-icons/github.png';
 import LinkedInIcon from './../../../assets/social-icons/linked-in.png';
 import EmailIcon from './../../../assets/social-icons/email.png';
 
-export default (props) => (
-    <div className="header">
-        <div className="header__container">
-            <div className="header__title-section">
-                <div className="header__title-section__text">
-                    <h1 className="header__title-section__title">JOSH LEE</h1>
-                    <p className="header__title-section__subtitle">CREATIVE DEVELOPER</p>
+export default class Header extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    componentDidMount() {
+        return this.props.setHeaderOffSet(document.getElementById("header").offsetTop);
+    }
+
+    render() {
+        return (
+            <div id="header" className="header">
+                <div className="header__container">
+                    <img className="header__logo" src={SiteLogo}/>
+                    <div className="header__content-section">
+                        <div className="header__content-section__site-link-wrapper">
+                            <NavLink className={document.location.hash == "#home-content" ? "header__content-section__site-link site-link-active" : "header__content-section__site-link"} to="#home-content">HOME</NavLink>
+                            <NavLink className={document.location.hash == "#projects-content" ? "header__content-section__site-link site-link-active" : "header__content-section__site-link"} to="#projects-content">PROJECTS</NavLink>
+                            <NavLink className={document.location.hash == "#cv-content" ? "header__content-section__site-link site-link-active" : "header__content-section__site-link"} to="#cv-content">CV</NavLink>
+                            <NavLink className={document.location.hash == "#footer-content" ? "header__content-section__site-link site-link-active" : "header__content-section__site-link"} to="#footer-content">CONTACT</NavLink>
+                        </div>
+                        <div className="header__content-section__social-link-wrapper">
+                            <a href="https://github.com/joshleedev" target="_blank"><img
+                                id="github-icon" 
+                                className="social-link-icon header__content-section__social-link"  
+                                onMouseOver={this.props.handleSocialIconHover} 
+                                onMouseLeave={this.props.handleSocialIconHoverOff} 
+                                src={GithubIcon} 
+                                alt="github"
+                            /></a>
+                            <a href="https://www.linkedin.com/in/joshleedev/" target="_blank"><img 
+                                id="linkedin-icon" 
+                                className="social-link-icon"
+                                onMouseOver={this.props.handleSocialIconHover} 
+                                onMouseLeave={this.props.handleSocialIconHoverOff} 
+                                src={LinkedInIcon} 
+                                alt="linkedIn"
+                            /></a>
+                            <a href="mailto: joshlee.dev@gmail.com"><img 
+                                id="email-icon" 
+                                className="social-link-icon"
+                                onMouseOver={this.props.handleSocialIconHover} 
+                                onMouseLeave={this.props.handleSocialIconHoverOff} 
+                                src={EmailIcon} 
+                                alt="email"
+                            /></a>
+                        </div>
+                    </div>
                 </div>
-                <img className="header__title-section__logo" src={SiteLogo} alt="header logo"/>
+                <div className="header__border"></div>
             </div>
-            <div className="header__content-section">
-                <div className="header__content-section__site-link-wrapper">
-                    <a className="header__content-section__site-link" href="/public/index.html">HOME</a>
-                    <a className="header__content-section__site-link" href="/public/index.html">BLOG</a>
-                    <a className="header__content-section__site-link" href="/public/index.html">PROJECTS</a>
-                    <a className="header__content-section__site-link" href="/public/index.html">CV</a>
-                    <a className="header__content-section__site-link" href="/public/index.html">CONTACT</a>
-                </div>
-                <div className="header__content-section__social-link-wrapper">
-                    <a className="header__content-section__social-link" href="/public/index.html">
-                        <img className="social-link-icon" src={GithubIcon} alt="github"/>
-                    </a>
-                    <a className="header__content-section__social-link" href="/public/index.html">
-                        <img className="social-link-icon" src={LinkedInIcon} alt="linkedIn"/>
-                    </a>
-                    <a className="header__content-section__social-link" href="/public/index.html">
-                        <img className="social-link-icon" src={EmailIcon} alt="email"/>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-);
+        );
+    }
+} 
+
+                   

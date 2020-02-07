@@ -1,0 +1,22 @@
+//imports
+@import './components/layout/settings';
+@import './components/layout/base';
+@import './components/layout/header/header';
+@import './components/layout/footer/footer';
+@import './components/content/landing/landing';
+@import './components/content/home/home';
+@import './components/content/blog/blog';
+@import './components/content/project-list/project-list';
+@import './components/content//project-item/project-item';
+@import './components/content/cv/cv';
+@import './components/content/contact/contact';
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 95%;
+}
+
+.sticky-body {
+    padding-top: 60px;
+}

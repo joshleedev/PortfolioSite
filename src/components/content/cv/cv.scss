@@ -1,5 +1,5 @@
 .cv-content {
-    padding: 10rem 10rem;
+    padding: 15rem 10rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -16,3 +16,7 @@ embed {
     border-left: none;
 }
 
+.cv-error__link {
+    color: $yellow;
+    text-decoration: none;
+}

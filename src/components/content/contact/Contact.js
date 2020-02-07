@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default () => (
-    <div className="contact-content">
+    <div id="contact-content" className="contact-content">
         <h2>Didn't find what you're after?</h2>
         <div className="contact-title__wrapper">
             <h2 className="contact-title">Feel free to get </h2>
