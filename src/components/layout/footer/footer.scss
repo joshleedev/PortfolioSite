@@ -1,12 +1,11 @@
 .footer-content {
     position: relative;
-    background: $green;
-    color: $light-gray;
+    background: $yellow;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 20rem;
+    height: min-content;
 }
 
 .reset-button {
@@ -16,20 +15,14 @@
 
 .reset-img {
     width: $xl-size;
-}
-
-.footer-links-wrapper {
-    padding: $l-size 0 $s-size 0;
-}
-
-.footer-link {
-    width: $xl-size;
-    height: auto;
-    padding: 0 $xs-size;
+    border: 1px solid $dark-gray;
 }
 
 .footer-signature-wrapper {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: $l-size;
 }
 
 .footer-signature {

@@ -41,9 +41,9 @@ export default class ProjectItem extends React.Component {
             <div className="project-wrapper" onMouseOver={this.handleProjectHoverOn} onMouseLeave={this.handleProjectHoverOff}>
                 <img className="project-img" src={StockImg}/>
                 <div className="project-overlay">
-                    {this.state.isHovered && <p className="project-title">PROJECT TITLE</p>}
-                    {this.state.isHovered && <p className="project-tech">React, JS.</p>}
-                    {this.state.isHovered && <button className="project-view" onClick={this.onOpenModal}>VIEW</button>}
+                    {this.state.isHovered && <h3 className="project-title">PROJECT TITLE</h3>}
+                    {this.state.isHovered && <p className="project-tech">React / JavaScript</p>}
+                    {this.state.isHovered && <button className="project-view" onClick={this.onOpenModal}>TAKE A LOOK</button>}
                 </div>
                 <Modal open={open} onClose={this.onCloseModal} center classNames={{ modal: 'modal-wrapper' }} closeIconId="test">
                     <div className="modal-content">
@@ -74,7 +74,6 @@ export default class ProjectItem extends React.Component {
                             <img className="github-icon" src={GitHubIcon} />
                             <h3 className="github-link">https://github.com/joshleedev/test</h3>
                         </div>
-       
                     </div>
                 </Modal>
             </div>

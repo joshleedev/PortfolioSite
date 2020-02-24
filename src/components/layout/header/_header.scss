@@ -3,7 +3,7 @@
     background-clip: padding-box;
     padding: $xs-size $xl-size 0 $xl-size;
     font-family: $title-font;
-    z-index: 1;
+    z-index: 2;
 }
 
 .header__border {
@@ -22,8 +22,8 @@
 }
 
 .header__logo {
-    width: $xxl-size;
-    height: auto;
+    width: auto;
+    height: $xl-size;
 }
 
 ////////// CONTENT SECTION
@@ -55,7 +55,7 @@
 .site-link-active {
     color: white;
     background-color: $yellow;
-    border: 1px solid white;
+    border: 1px solid $yellow;
 }
 
 .site-link-active:hover {
@@ -69,8 +69,15 @@
     justify-content: space-between;
     align-items: center;
 }
+.header__content-section__social-link {
+    height: $xl-size;
+}
 
 .social-link-icon {
     width: 4.3rem;
     padding: 0 $xs-size;
+} 
+
+.social-link-icon {
+    transition: all 0.2s ease-in-out;
 }

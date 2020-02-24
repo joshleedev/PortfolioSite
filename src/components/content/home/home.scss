@@ -4,10 +4,8 @@
     flex-direction: row;
 }
 
-.home-content__text-block {
-    flex-basis: 60%
-}
 
+//Text block styling
 .home-content__text-block__title__wrapper {
     display: flex;
     flex-direction: row;
@@ -18,7 +16,58 @@
     color: $yellow;
 }
 
-.home-content__image {
-    flex-basis: 40%;
-    width: $xl-size;
+
+
+//Skill section styling
+.skill-wrapper {
+    padding-right: $xxl-size;
+    padding-top: $l-size;
+    text-align: center;
 }
+
+.skill-bar {
+    display: flex;
+    flex-direction: row;
+    margin-top: $m-size;
+}
+
+.skill-bar__title {
+    color: white;
+    background: $dark-gray;
+    padding: $xs-size 0;
+    width: 15%
+}
+
+.skill-bar__fill {
+    background: $yellow;
+}
+
+.css-percent, .html-percent {
+    width: 80%;
+}
+
+.react-percent, .js-percent {
+    width: 65%;
+}
+
+.node-percent {
+    width: 50%;
+}
+
+.skill-bar__empty {
+    background: $light-gray;
+    flex-grow: 3;   
+}
+
+.skill-bar__percent {
+    background: $light-gray;
+    text-align: center;
+    padding: $xs-size;
+    width: 5%;
+}
+
+//Image Styling
+.home-content__image {
+    width: 45%;
+}
+

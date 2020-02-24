@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Switch} from 'react-router-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 //Component Imports
 import './index.scss';
@@ -15,35 +15,25 @@ import Contact from './components/content/contact/Contact';
 import Footer from './components/layout/footer/Footer';
 
 //Icon imports
+import SiteIcon from './assets/imgs/site-logo.png';
+import SiteHoverIcon from './assets/imgs/site-logo-inverted.png';
 import GithubIcon from './assets/social-icons/github.png';
-import GithubHoverIcon from './assets/social-icons/github-yellow.png';
+import GithubHoverIcon from './assets/social-icons/github-inverted-yellow.png';
 import LinkedInIcon from './assets/social-icons/linked-in.png';
-import LinkedInHoverIcon from './assets/social-icons/linked-in-yellow.png';
+import LinkedInHoverIcon from './assets/social-icons/linked-in-inverted-yellow.png';
 import EmailIcon from './assets/social-icons/email.png';
-import EmailHoverIcon from './assets/social-icons/email-yellow.png';
-import UpButton from './assets/imgs/up-arrow-y.png';
-import UpButtonHover from './assets/imgs/up-arrow.png';
+import EmailHoverIcon from './assets/social-icons/email-inverted-yellow.png';
+import ReturnTopIcon from './assets/imgs/up-arrow.png';
+import ReturnTopHoverIcon from './assets/imgs/up-arrow-y.png';
+import PrevProjectIcon from './assets/imgs/project-arrow-left.png';
+import PrevProjectHoverIcon from './assets/imgs/project-arrow-left-inverted.png'
+import NextProjectIcon from './assets/imgs/project-arrow-right.png';
+import NextProjectHoverIcon from './assets/imgs/project-arrow-right-inverted.png';
 
-let headerOffSet;
 
-let setHeaderOffSet = (value) => {
-    headerOffSet = value;
-}
-
-let handleStickyHeader = (initialOffSet) => {
-    let header = document.getElementById("header");
-    let body = document.getElementById("body-content");
-    if(window.pageYOffset >= initialOffSet+200) {
-        header.classList.add("sticky");
-        body.classList.add('sticky-body');
-    } else {
-        header.classList.remove("sticky");
-        body.classList.remove('sticky-body');
-    }
-}
-
-let handleSocialIconHover = (e) => {
+let handleIconHover = (e) => {
     let icon = e.currentTarget.id;
+    console.log(icon);
 
     if(icon == "github-icon") {
         e.currentTarget.src = GithubHoverIcon;
@@ -54,10 +44,20 @@ let handleSocialIconHover = (e) => {
     else if(icon == "email-icon") {
         e.currentTarget.src = EmailHoverIcon;
     }
-    else e.currentTarget.src = UpButtonHover;
+    else if(icon == "return-top") {
+        e.currentTarget.src = ReturnTopHoverIcon;
+    }
+    else if(icon == "prev-project") {
+        e.currentTarget.src = PrevProjectHoverIcon;
+    }
+    else if(icon == "next-project") {
+        e.currentTarget.src = NextProjectHoverIcon;
+    }
+    else if (icon == "header-logo") {
+        e.currentTarget.src = SiteHoverIcon;
+    }
 }
-
-let handleSocialIconHoverOff = (e) => {
+let handleIconHoverOff = (e) => {
     let icon = e.currentTarget.id;
 
     if(icon == "github-icon") {
@@ -69,11 +69,36 @@ let handleSocialIconHoverOff = (e) => {
     else if(icon == "email-icon") {
         e.currentTarget.src = EmailIcon;
     }
-    else e.currentTarget.src = UpButton;
+    else if(icon == "return-top") {
+        e.currentTarget.src = ReturnTopIcon;
+    }
+    else if(icon == "prev-project") {
+        e.currentTarget.src = PrevProjectIcon;
+    }
+    else if(icon == "next-project") {
+        e.currentTarget.src = NextProjectIcon;
+    }
+    else if (icon == "header-logo") {
+        e.currentTarget.src = SiteIcon;
+    }
 }
 
+let headerOffSet;
+let setHeaderOffSet = (value) => {
+    headerOffSet = value;
+}
+let handleStickyHeader = (initialOffSet) => {
+    let header = document.getElementById("header");
+    let body = document.getElementById("body-content");
+    if(window.pageYOffset >= initialOffSet+200) {
+        header.classList.add("sticky");
+        body.classList.add('sticky-body');
+    } else {
+        header.classList.remove("sticky");
+        body.classList.remove('sticky-body');
+    }
+}
 window.onscroll = () => {
-    console.log(headerOffSet);
     handleStickyHeader(headerOffSet);
 };
 
@@ -82,8 +107,8 @@ const routes = (
         <div>
             <Landing/>
             <Header 
-                handleSocialIconHover={handleSocialIconHover} 
-                handleSocialIconHoverOff={handleSocialIconHoverOff}
+                handleIconHover={handleIconHover} 
+                handleIconHoverOff={handleIconHoverOff}
                 setHeaderOffSet={setHeaderOffSet}
             />
             <Switch>
@@ -95,7 +120,13 @@ const routes = (
                     />
                     <Route
                         path="/" 
-                        component={ProjectList} 
+                        render={
+                            (props) => 
+                                <ProjectList 
+                                handleIconHover={handleIconHover} 
+                                handleIconHoverOff={handleIconHoverOff}
+                                />
+                        }
                         exact={true}
                     />
                     <Route
@@ -105,7 +136,13 @@ const routes = (
                     />
                     <Route
                         path="/" 
-                        component={Contact} 
+                        render={
+                            (props) => 
+                                <Contact 
+                                handleIconHover={handleIconHover} 
+                                handleIconHoverOff={handleIconHoverOff}
+                                />
+                        } 
                         exact={true}
                     />
                     <Route
@@ -113,8 +150,8 @@ const routes = (
                         render={
                             (props) => 
                                 <Footer 
-                                    handleSocialIconHover={handleSocialIconHover} 
-                                    handleSocialIconHoverOff={handleSocialIconHoverOff}
+                                handleIconHover={handleIconHover} 
+                                handleIconHoverOff={handleIconHoverOff}
                                 />
                         } 
                         exact={true}

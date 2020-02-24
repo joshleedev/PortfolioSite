@@ -1,7 +1,9 @@
 import React from 'react';
 import ProjectItem from './../project-item/project-item';
-import PrevProjectButton from './../../../assets/imgs/project-arrow-left-y.png';
-import NextProjectButton from './../../../assets/imgs/project-arrow-right-y.png';
+import PrevProject from './../../../assets/imgs/project-arrow-left.png';
+import PrevProjectHover from './../../../assets/imgs/project-arrow-left-inverted.png'
+import NextProject from './../../../assets/imgs/project-arrow-right.png';
+import NextProjectHover from './../../../assets/imgs/project-arrow-right-inverted.png';
 
 
 export default class ProjectList extends React.Component {    
@@ -29,12 +31,24 @@ export default class ProjectList extends React.Component {
                             <input className="projects-content__heap__search-bar" placeholder="Search here"/>
                         </form>
                     <div className="projects-content__heap__projects-wrapper">
-                        <img className="projects-content__heap__project-button" src={PrevProjectButton}/>
+                        <img 
+                            id="prev-project" 
+                            className="projects-content__heap__project-button" 
+                            src={PrevProject}
+                            onMouseOver={this.props.handleIconHover} 
+                            onMouseLeave={this.props.handleIconHoverOff}
+                        />
                         <ProjectItem />
                         <ProjectItem />
                         <ProjectItem />
                         <ProjectItem />
-                        <img className="projects-content__heap__project-button" src={NextProjectButton}/>
+                        <img 
+                            id="next-project" 
+                            className="projects-content__heap__project-button" 
+                            src={NextProject}
+                            onMouseOver={this.props.handleIconHover} 
+                            onMouseLeave={this.props.handleIconHoverOff}
+                        />
                     </div>
                 </div>
             </div>

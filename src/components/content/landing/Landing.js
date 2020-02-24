@@ -11,6 +11,10 @@ export default () => (
                 <span> </span>
                 <span>Software</span>
                 <span>Creative</span>
+                <span>JavaScript</span>
+                <span>Passionate</span>
+                <span>React</span>
+                <span>Node.js</span>
             </TextLoop>{" "}
             Developer
         </h1>

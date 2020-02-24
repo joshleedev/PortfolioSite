@@ -20,12 +20,6 @@
     background-size: cover;
     width: 30rem;
     height: 18rem;
-    transition: filter .5s ease-in-out;
-    filter: blur(0px);
-}
-
-.project-img:hover {
-    filter: blur(1px);
 }
 
 .project-overlay {
@@ -34,8 +28,14 @@
     flex-direction: column;
     align-items: center;
     background: $dark-gray;
-    opacity: 80%;
-    width: 100%; 
+    opacity: 0%;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.4s;
+}
+
+.project-overlay:hover {
+    opacity: 90%;
 }
 
 .project-title {
@@ -50,10 +50,20 @@
 
 .project-view {
     position: relative;
-    top: 60%;
-    width: 25%;
+    top: 15%;
+    width: 30%;
+    background: $yellow;
+    border: none;
+    color: $dark-gray;
+    padding: $xs-size;
+    border: 1px solid $yellow;
+    opacity: 120%;
+}
+
+.project-view:hover {
     background: none;
     color: $yellow;
+    border: 1px solid $yellow;
 }
 
 //Modal Styling
