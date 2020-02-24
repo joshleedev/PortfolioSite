@@ -12,7 +12,13 @@ export default class Contact extends React.Component {
 
     sendEmail(e) {
         e.preventDefault();
-        emailjs.sendForm('gmail','portfolio_site','contact-form');
+        emailjs.sendForm('gmail','portfolio_site', e.target, 'user_2bIa3aWG5ACO2JLlBUZPT')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+        e.target.reset();
     }
 
     render() {
@@ -55,12 +61,12 @@ export default class Contact extends React.Component {
                     <h2 className="contact-title">Feel free to get </h2>
                     <h2 className="contact-title__highlight">in touch.</h2>
                 </div>
-                <form className="contact-form" id="contact-form" method="post" encType="text/plain">
+                <form className="contact-form"  onSubmit={this.sendEmail} encType="text/plain">
                     <div className="contact-form__personal-info">
-                        <input className="contact-form__personal-info__name" placeholder="FULL NAME" required/>
-                        <input className="contact-form__personal-info__email" placeholder="EMAIL" required/>
+                        <input className="contact-form__personal-info__name" placeholder="FULL NAME" required name="name"/>
+                        <input className="contact-form__personal-info__email" placeholder="EMAIL" required name="email"/>
                     </div>
-                    <textarea className="contact-form__message" placeholder="WRITE YOUR MESSAGE HERE" maxLength="495" required/>  
+                    <textarea className="contact-form__message" placeholder="WRITE YOUR MESSAGE HERE" maxLength="495" name="message" required/>  
                     <button className="contact-form__submit">GO</button>
                 </form>
             </div>
