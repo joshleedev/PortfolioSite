@@ -66,15 +66,8 @@
     width: 30%;
 }
 
-.projects-content__heap__projects-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: $xl-size 0;
-}
 
-.projects-content__heap__project-previous, .projects-content__heap__project-button {
-    width: $l-size;
-    height: $l-size;
+.carousel_img {
+    width: 40rem;
+    z-index: 3;
 }
-

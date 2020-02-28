@@ -1,14 +1,28 @@
 import React from 'react';
+import Carousel from '@brainhubeu/react-carousel';
+import '@brainhubeu/react-carousel/lib/style.css';
 import ProjectItem from './../project-item/project-item';
+
 import PrevProject from './../../../assets/imgs/project-arrow-left.png';
 import PrevProjectHover from './../../../assets/imgs/project-arrow-left-inverted.png'
 import NextProject from './../../../assets/imgs/project-arrow-right.png';
 import NextProjectHover from './../../../assets/imgs/project-arrow-right-inverted.png';
 
+//test imgs
+import StockImage from './../../../assets/temp/stock/stock-2.jpeg';
+
 
 export default class ProjectList extends React.Component {    
 
+    
     render() {
+
+        const slides = [
+            (<img key={1} className="carousel_img" src={StockImage} />),
+            (<img key={2} className="carousel_img" src={StockImage} />),
+            (<img key={3} className="carousel_img" src={StockImage} />),
+        ];
+
         return (
             <div id="projects-content" className="projects-content">
                 <div className="projects-content__featured">
@@ -29,27 +43,11 @@ export default class ProjectList extends React.Component {
                     </div>
                     <form className="projects-content__heap__search-form">
                             <input className="projects-content__heap__search-bar" placeholder="Search here"/>
-                        </form>
-                    <div className="projects-content__heap__projects-wrapper">
-                        <img 
-                            id="prev-project" 
-                            className="projects-content__heap__project-button" 
-                            src={PrevProject}
-                            onMouseOver={this.props.handleIconHover} 
-                            onMouseLeave={this.props.handleIconHoverOff}
-                        />
-                        <ProjectItem />
-                        <ProjectItem />
-                        <ProjectItem />
-                        <ProjectItem />
-                        <img 
-                            id="next-project" 
-                            className="projects-content__heap__project-button" 
-                            src={NextProject}
-                            onMouseOver={this.props.handleIconHover} 
-                            onMouseLeave={this.props.handleIconHoverOff}
-                        />
-                    </div>
+                    </form>
+                    <Carousel
+                        arrows
+                        slides={slides}
+                    />  
                 </div>
             </div>
         );
