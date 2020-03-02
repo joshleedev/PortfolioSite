@@ -8,7 +8,7 @@
 
 .projects-content__featured {
     text-align: center;
-    padding-bottom: $m-size;
+    padding-bottom: $l-size;
 }
 
 .projects-content__featured__title-highlight {
@@ -19,7 +19,7 @@
 .projects-content__featured__projects-wrapper {
     display: flex;
     align-items: center;
-    padding: $xl-size 0;
+    padding: $m-size 0;
 }
 
 .projects-content__featured__project__spotlight {
@@ -60,14 +60,56 @@
     width: 15%;
     transition: width 0.4s ease-in-out;
     padding: $xs-size 0;
+    text-align: center;
 }
 
 .projects-content__heap__search-bar:focus {
     width: 30%;
+    content: none;
 }
 
+//CAROUSEL STYLING
 
-.carousel_img {
-    width: 40rem;
-    z-index: 3;
+.carousel__wrapper {
+    padding: $m-size 0;
+    width: 70vw;
+}
+
+.carousel__img {
+    width: 36rem;
+    height: 22rem;
+}
+
+//CUSTOM ARROW STYLING
+.arrow__wrapper, .arrow-disabled__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    background: $yellow;
+    border: 1px solid $yellow;
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+    color: $off-white;
+}
+
+.arrow__wrapper:hover {
+    background: none;
+    color: $yellow;
+}
+
+.arrow__text {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.arrow-disabled__wrapper {
+    background: $light-gray;
+    border: 1px solid $light-gray;
+}
+
+.arrow-disabled__text {
+    font-size: 2.5rem;
+    margin: 0;
 }

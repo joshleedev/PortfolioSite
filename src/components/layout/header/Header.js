@@ -21,13 +21,16 @@ export default class Header extends React.Component {
         return (
             <div id="header" className="header">
                 <div className="header__container">
-                    <img 
-                        className="header__logo" 
-                        id="header-logo"
-                        onMouseOver={this.props.handleIconHover} 
-                        onMouseLeave={this.props.handleIconHoverOff}  
-                        src={SiteLogo}
-                    />
+                    <NavLink to="#landing-content">
+                        <img 
+                            className="header__logo" 
+                            id="header-logo"
+                            onMouseOver={this.props.handleIconHover} 
+                            onMouseLeave={this.props.handleIconHoverOff}  
+                            src={SiteLogo}        
+                        />
+                    </NavLink>
+                    
                     <div className="header__content-section">
                         <div className="header__content-section__site-link-wrapper">
                             <NavLink className={document.location.hash == "#home-content" ? "header__content-section__site-link site-link-active" : "header__content-section__site-link"} to="#home-content">HOME</NavLink>

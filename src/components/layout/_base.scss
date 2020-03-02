@@ -17,3 +17,7 @@ a, button {
 button:disabled {
     cursor: default;
 }
+
+input:focus::placeholder {
+    color: transparent;
+}

@@ -1,9 +1,69 @@
 {
-    "project": [
+    "projects": [
 
         {
-            "id":"01",
-            "":""
+            "id":"1",
+            "title":"Esports Portfolio Site",
+            "githublink":"",
+            "techstack":["React", "HTML", "CSS"],
+            "images":["", "", ""],
+            "description":""
+        },
+        {
+            "id":"2",
+            "title":"Personal Portfolio Site",
+            "githublink":"https://github.com/joshleedev/PortfolioSite",
+            "techstack":["React", "HTML", "CSS"],
+            "images":["", "", ""],
+            "description":""
+        },
+        {
+            "id":"3",
+            "title":"LEGO Rubik's Cube Solver",
+            "githublink":"https://github.com/joshleedev/3YP-RubikCubeSolver",
+            "techstack":["MATLAB"],
+            "images":["", "", ""],
+            "description":""
+        },
+        {
+            "id":"4",
+            "title":"VoIP System",
+            "githublink":"https://github.com/joshleedev/VoIP-System",
+            "techstack":["Java"],
+            "images":["", "", ""],
+            "description":""
+        },
+        {
+            "id":"5",
+            "title":"AR App - UEA Open Day",
+            "githublink":"https://github.com/joshleedev/SE2-AugmentedRealityApp",
+            "techstack":["Java", "HTML", "CSS"],
+            "images":["", "", ""],
+            "description":""
+        },
+        {
+            "id":"6",
+            "title":"Room Finder App - UEA Open Day",
+            "githublink":"https://github.com/joshleedev/SE2-RoomFinderApp",
+            "techstack":["Java", "HTML", "CSS"],
+            "images":["", "", ""],
+            "description":""
+        },
+        {
+            "id":"7",
+            "title":"Car Finder App - UEA Open Day",
+            "githublink":"https://github.com/joshleedev/SE2-CarLocationApp",
+            "techstack":["Java", "HTML", "CSS"],
+            "images":["", "", ""],
+            "description":""
+        },
+        {
+            "id":"8",
+            "title":"Image Categorisation",
+            "githublink":"https://github.com/joshleedev/SE2-RoomFinderApp",
+            "techstack":["MATLAB"],
+            "images":["", "", ""],
+            "description":""
         }
     ]
 }
