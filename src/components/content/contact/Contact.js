@@ -24,6 +24,9 @@ export default class Contact extends React.Component {
     render() {
         return (
             <div id="contact-content" className="contact-content">
+                <div className="cv__title__wrapper">
+                    <h2 className="cv__title">CONTACT</h2>
+                </div>
                 <div className="contact__social-wrapper">
                     <a href="https://github.com/joshleedev" target="_blank">
                         <img
@@ -56,18 +59,17 @@ export default class Contact extends React.Component {
                         />
                     </a>
                 </div>
-                <h2>Didn't find what you're after?</h2>
                 <div className="contact-title__wrapper">
-                    <h2 className="contact-title">Feel free to get </h2>
-                    <h2 className="contact-title__highlight">in touch.</h2>
+                    <h3 className="contact-title">Feel free to get </h3>
+                    <h3 className="contact-title__highlight">in touch.</h3>
                 </div>
                 <form className="contact-form"  onSubmit={this.sendEmail} encType="text/plain">
                     <div className="contact-form__personal-info">
-                        <input className="contact-form__personal-info__name" placeholder="FULL NAME" required name="name"/>
-                        <input className="contact-form__personal-info__email" placeholder="EMAIL" required name="email"/>
+                        <input className="contact-form__personal-info__name" placeholder="FULL NAME" required name="name" autoComplete="off"/>
+                        <input className="contact-form__personal-info__email" placeholder="EMAIL" required name="email" autoComplete="off"/>
                     </div>
-                    <textarea className="contact-form__message" placeholder="WRITE YOUR MESSAGE HERE" maxLength="495" name="message" required/>  
-                    <button className="contact-form__submit">GO</button>
+                    <textarea className="contact-form__message" placeholder="WRITE YOUR MESSAGE HERE" maxLength="495" name="message" autoComplete="off" required/>  
+                    <button className="contact-form__submit">SEND</button>
                 </form>
             </div>
         );

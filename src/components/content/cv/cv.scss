@@ -1,5 +1,23 @@
-.cv-content {
+.cv-section {
     padding: 15rem 10rem;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.cv__title__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    padding-bottom: $l-size;
+}
+
+.cv__title-highlight {
+    padding-left: $xs-size;
+    color: $yellow;
+}
+
+.cv-content {
     display: flex;
     flex-direction: row;
     align-items: center;

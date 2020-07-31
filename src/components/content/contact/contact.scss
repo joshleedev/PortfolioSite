@@ -8,7 +8,7 @@
 
 .contact-title__wrapper {
     display: flex;
-    padding-bottom: $l-size;
+    padding-bottom: $xl-size;
 }
 
 .contact-title__highlight {
@@ -17,11 +17,11 @@
 }
 
 .contact__social-wrapper {
-    padding: $l-size;
+    padding: 0;
 }
 
 .contact__social-link {
-    width: 6rem;
+    width: 7rem;
     padding: 0 $xs-size;
 }
 
@@ -63,6 +63,6 @@ input:focus, textarea:focus {
 
 .contact-form__submit:hover {
     color: $yellow;
-    background: none;
+    background: white;
     border: 1px solid $yellow;
 }

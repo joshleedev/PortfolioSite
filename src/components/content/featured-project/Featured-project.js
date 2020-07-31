@@ -10,7 +10,6 @@ import StockImg1 from './../../../assets/temp/stock/stock-1.jpeg';
 import StockImg2 from './../../../assets/temp/stock/stock-2.jpeg';
 import StockImg3 from './../../../assets/temp/stock/stock-3.jpeg';
 
-
 export default class ProjectItem extends React.Component {
     constructor(props) {
         super(props);
@@ -42,8 +41,8 @@ export default class ProjectItem extends React.Component {
         const { open } = this.state;
 
         return (
-            <div className="project-wrapper" onMouseOver={this.handleProjectHoverOn} onMouseLeave={this.handleProjectHoverOff}>
-                <img className="project__img" src={StockImg1}/>
+            <div className="project-wrapper featured" onMouseOver={this.handleProjectHoverOn} onMouseLeave={this.handleProjectHoverOff}>
+                <img className="featured__img" src={StockImg1}/>
                 <div className="project-overlay">
                     {this.state.isHovered && <h3 className="project-title">{this.props.title}</h3>}
                     {this.state.isHovered && <p className="project-tech">{this.props.techStack}</p>}
@@ -64,10 +63,14 @@ export default class ProjectItem extends React.Component {
                         </div>
                         <div className="modal-body-wrapper">
                             <p className="body-section-one">
-                                {this.props.description}
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                Fusce ac orci at ligula auctor mollis mattis vitae ipsum.
+                                Ut ultricies, quam eleifend maximus mattis, 
+                                est diam elementum lacus, at posuere mi mauris nec augue.
                             </p>
                             <p className="body-section-two">
-                                {this.props.descriptionTwo}
+                                Nullam non semper dui, sed iaculis sem. 
+                                Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                             </p>
                         </div>
                         <div className="github-wrapper">

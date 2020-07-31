@@ -10,21 +10,31 @@
 
 .reset-button {
     position: absolute;
-    top: -13%;
+    top: -18%;
 }
 
 .reset-img {
     width: $xl-size;
-    border: 1px solid $dark-gray;
 }
 
 .footer-signature-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: $s-size;
     padding-top: $l-size;
+    padding-bottom: $s-size;
+}
+
+.footer-signature, .footer-date {
+    padding-right: $xs-size;
+    color: white;
 }
 
 .footer-signature {
-    padding-right: $xs-size;
+    margin: $xs-size 0;
+}
+
+.footer-date {
+    margin-top: 0;
 }

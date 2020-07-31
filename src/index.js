@@ -24,7 +24,7 @@ import LinkedInHoverIcon from './assets/social-icons/linked-in-inverted-yellow.p
 import EmailIcon from './assets/social-icons/email.png';
 import EmailHoverIcon from './assets/social-icons/email-inverted-yellow.png';
 import ReturnTopIcon from './assets/imgs/up-arrow.png';
-import ReturnTopHoverIcon from './assets/imgs/up-arrow-y.png';
+import ReturnTopHoverIcon from './assets/imgs/up-arrow-inverted-yellow.png';
 import PrevProjectIcon from './assets/imgs/project-arrow-left.png';
 import PrevProjectHoverIcon from './assets/imgs/project-arrow-left-inverted.png'
 import NextProjectIcon from './assets/imgs/project-arrow-right.png';

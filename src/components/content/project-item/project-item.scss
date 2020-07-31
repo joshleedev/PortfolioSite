@@ -6,20 +6,28 @@
     text-align: center;
     flex-direction: row;
     color: white;
-    border: 1px solid white;
-    transition: all 0.2s ease-in-out;
-}
+}   
 
-.project-wrapper:hover {
-    border: 1px solid $yellow;
-    transform: scale(1.05);
-    z-index: 1;
-}
-
-.project-img {
+.project__img {
     background-size: cover;
-    width: 30rem;
-    height: 18rem;
+    width: 36rem;
+    height: 22rem;
+}
+
+.featured__img {
+    width: 33rem;
+    height: 20rem;
+    border: none;
+}
+
+.featured {
+    transition: all 0.1s ease-in-out;
+}
+
+.featured:hover {
+    border: 1px solid $yellow;
+    transform: scale(1.1);
+    z-index: 1;
 }
 
 .project-overlay {
@@ -58,6 +66,7 @@
     padding: $xs-size;
     border: 1px solid $yellow;
     opacity: 120%;
+    transition: all 0.2s ease-in-out;
 }
 
 .project-view:hover {

@@ -1,5 +1,5 @@
 .home-content {
-    padding: 25rem 15rem 25rem 10rem;
+    padding: 22rem 20rem 22rem 20rem;
     display: flex;
     flex-direction: row;
 }
@@ -17,12 +17,12 @@
 }
 
 
-
 //Skill section styling
 .skill-wrapper {
     padding-right: $xxl-size;
     padding-top: $l-size;
     text-align: center;
+    width: 95%;
 }
 
 .skill-bar {
@@ -68,6 +68,8 @@
 
 //Image Styling
 .home-content__image {
+    padding-top: $xxl-size;
     width: 45%;
+    height: 45%;
 }
 

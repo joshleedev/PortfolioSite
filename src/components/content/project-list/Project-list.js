@@ -3,6 +3,7 @@ import Carousel from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 
 import ProjectItem from './../project-item/project-item';
+import FeaturedProject from './../featured-project/Featured-project';
 import ProjectData from './../../../assets/json/projects.json';
 
 import PrevProject from './../../../assets/imgs/project-arrow-left.png';
@@ -13,46 +14,85 @@ import NextProjectHover from './../../../assets/imgs/project-arrow-right-inverte
 //test imgs
 import StockImage from './../../../assets/temp/stock/stock-1.jpeg';
 
-
 export default class ProjectList extends React.Component { 
     constructor(){
         super();
         this.state = {
             projectData: [],
-            slides: []
+            featuredProjects: [],
+            projectList: [],
+            searchValue: ""
         }
+        this.serveProjectHeap = this.serveProjectHeap.bind(this);
+        this.handleSearch = this.handleSearch.bind(this);
     }
 
     componentDidMount() {
-        let projectData = ProjectData.projects.map((projects, key) => {
-            return (
-                <img
-                    key={projects.id}
-                    title={projects.title}
-                    github-link={projects.githublink}
-                    tech-stack={projects.techstack}
-                    images={projects.images}
-                    description={projects.description}
+        let featuredProjects = [];
+        let projectData = ProjectData.projects.map((project, key) => {
+            let projectItem = 
+                <ProjectItem
+                    key={project.id}
+                    title={project.title}
+                    githubLink={project.githublink}
+                    techStack={project.techstack.join('/')}
+                    images={project.images}
+                    description={project.description}
+                    descriptionTwo={project.descriptionTwo}
                     src={StockImage}
                 />
-            )
+            if(project.featured == "true"){
+                let featuredProject = 
+                    <FeaturedProject
+                        key={project.id}
+                        title={project.title}
+                        githubLink={project.githublink}
+                        techStack={project.techstack.join('/')}
+                        images={project.images}
+                        description={project.description}
+                        descriptionTwo={project.descriptionTwo}
+                        src={StockImage}
+                    />
+                featuredProjects.push(featuredProject);
+            }
+            return projectItem;
         })
-        console.log(projectData);
         this.setState({projectData});
+        this.setState({featuredProjects});
+        this.setState({projectList: projectData});
     }
-    
-    render() {
-        console.log(this.projectData);
-        
-        const slides = [
-            (<img key={1} className="carousel__img" src={StockImage}/>),
-            (<img key={2} className="carousel__img" src={StockImage}/>),
-            (<img key={3} className="carousel__img" src={StockImage}/>),
-            (<img key={4} className="carousel__img" src={StockImage}/>),
-            (<img key={5} className="carousel__img" src={StockImage}/>),
-            (<img key={6} className="carousel__img" src={StockImage}/>),
-        ];
 
+    handleSearch(e){
+        this.setState({searchValue: e.target.value}, this.serveProjectHeap)
+    }
+
+    serveProjectHeap(){
+        const searchBorder = document.getElementById("search-bar");
+        searchBorder.classList.remove('not-found');
+        let projectList = [];
+        let data = this.state.projectData;
+
+        for(let j=0; j<data.length; j++) {
+            if(data[j].props.title.includes(this.state.searchValue)) {
+                projectList.push(data[j]);
+            }
+            else {
+                let techStackArray = data[j].props.techStack.split("/");
+                for(let i=0; i<techStackArray.length; i++) {
+                    if(data[j].props.techStack.split("/")[i].includes(this.state.searchValue)) {
+                        projectList.push(data[j]);
+                    }
+                }
+            }          
+        }
+        if(projectList.includes(undefined) || projectList.length == 0) {
+            projectList = this.state.projectData;
+            searchBorder.classList.add('not-found');
+        }
+        this.setState({projectList});
+    }
+
+    render() {
         const leftArrow = (
             <div className="arrow__wrapper">
                 <p className="arrow__text">&lt;</p>
@@ -64,7 +104,6 @@ export default class ProjectList extends React.Component {
                 <p className="arrow-disabled__text">&lt;</p>
             </div>
         );
-
 
         const rightArrow = (
             <div className="arrow__wrapper">
@@ -86,25 +125,31 @@ export default class ProjectList extends React.Component {
                         <h2 className="projects-content__featured__title">PROJECTS</h2>
                     </div>
                     <div className="projects-content__featured__projects-wrapper">
-                        <ProjectItem />
-                        <ProjectItem />
-                        <ProjectItem />
+                        {
+                            this.state.featuredProjects.map(project => {
+                                return project;
+                            })
+                        }
                     </div>
                 </div>
                 <div className="projects-content__heap">
                     <div className="projects-content__heap__title-wrapper">
                         <h2 className="projects-content__heap__title">THE PROJECT</h2>
-                        <h2 className="projects-content__heap__title-highlight">HEAP...</h2>
+                        <h2 className="projects-content__heap__title-highlight">HEAP</h2>
                     </div>
                     <form className="projects-content__heap__search-form">
-                        <input 
+                        <input
+                            id="search-bar"
                             className="projects-content__heap__search-bar" 
                             placeholder="Search here"
+                            autoComplete="off"
+                            value={this.state.value}
+                            onChange={this.handleSearch}
                         />
                     </form>
                     <div className="carousel__wrapper">
                         <Carousel
-                            slides={this.projectData}
+                            slides={this.state.projectList}
                             slidesPerScroll="3"
                             slidesPerPage="3"
                             arrowLeft={leftArrow}

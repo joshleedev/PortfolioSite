@@ -20,6 +20,7 @@
     display: flex;
     align-items: center;
     padding: $m-size 0;
+    height: 20rem;
 }
 
 .projects-content__featured__project__spotlight {
@@ -63,6 +64,10 @@
     text-align: center;
 }
 
+.not-found {
+    border: 1px solid red;
+}
+
 .projects-content__heap__search-bar:focus {
     width: 30%;
     content: none;
@@ -75,10 +80,8 @@
     width: 70vw;
 }
 
-.carousel__img {
-    width: 36rem;
-    height: 22rem;
-}
+
+
 
 //CUSTOM ARROW STYLING
 .arrow__wrapper, .arrow-disabled__wrapper {

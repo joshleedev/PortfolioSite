@@ -23,7 +23,7 @@ export default class Footer extends React.Component {
                 </NavLink>
                 <div className="footer-signature-wrapper">
                     <p className="footer-signature">JOSH LEE</p>
-                    <p>&copy;2020</p>
+                    <p className="footer-date">&copy;2020</p>
                 </div>
             </div>
         )

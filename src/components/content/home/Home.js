@@ -5,8 +5,8 @@ export default () => (
     <div id="home-content" className="home-content">
         <div className="home-content__text-block">
             <div className="home-content__text-block__title__wrapper">
-                <h2 className="home-content__text-block__title">A little</h2>
-                <h2 className="home-content__text-block__title-highlight">about me...</h2>
+                <h2 className="home-content__text-block__title">ABOUT</h2>
+                <h2 className="home-content__text-block__title-highlight">ME</h2>
             </div>
             <p className="home-content__text-block__body">
                 A creative junior developer aspiring to establish myself as a fully fledged full stack developer.
@@ -17,7 +17,7 @@ export default () => (
             <p className="home-content__text-block__body"> 
                 Passionate about creating fast and responsive applications, blending functionality with an intuitive UX/UI experience.
             </p>
-            <div className="skill-wrapper"> 
+            <div className="skill-wrapper">
                 <div className="skill-bar">
                     <div className="skill-bar__title">CSS</div>
                     <div className="skill-bar__fill css-percent"></div>
