@@ -8,15 +8,23 @@ import EmailIcon from '../../../assets/social-icons/email.png';
 export default class Contact extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            feedbackMessage: ""
+        }
     }
 
-    sendEmail(e) {
+    sendEmail = (e) => {
         e.preventDefault();
         emailjs.sendForm('gmail','portfolio_site', e.target, 'user_2bIa3aWG5ACO2JLlBUZPT')
             .then((result) => {
-                console.log(result.text);
+                if(result.text === 'OK'){
+                    let feedbackMessage = "Message Sent";
+                    this.setState({feedbackMessage});
+                }
             }, (error) => {
-                console.log(error.text);
+                //console.log(error.text);
+                let feedbackMessage = "Oops, something went wrong"
+                this.setState({feedbackMessage});
             });
         e.target.reset();
     }
@@ -24,53 +32,24 @@ export default class Contact extends React.Component {
     render() {
         return (
             <div id="contact-content" className="contact-content">
-                <div className="cv__title__wrapper">
-                    <h2 className="cv__title">CONTACT</h2>
+                <div className="contact__title__wrapper">
+                    <h2 className="contact__title">CONTACT</h2>
                 </div>
-                <div className="contact__social-wrapper">
-                    <a href="https://github.com/joshleedev" target="_blank">
-                        <img
-                            id="github-icon" 
-                            className="contact__social-link"  
-                            onMouseOver={this.props.handleIconHover} 
-                            onMouseLeave={this.props.handleIconHoverOff} 
-                            src={GithubIcon} 
-                            alt="github"
-                        />
-                    </a>
-                    <a href="https://www.linkedin.com/in/joshleedev/" target="_blank">
-                        <img 
-                            id="linkedin-icon" 
-                            className="contact__social-link"
-                            onMouseOver={this.props.handleIconHover} 
-                            onMouseLeave={this.props.handleIconHoverOff} 
-                            src={LinkedInIcon} 
-                            alt="linkedIn"
-                        />
-                    </a>
-                    <a href="mailto: joshlee.dev@gmail.com">
-                        <img 
-                            id="email-icon" 
-                            className="contact__social-link"
-                            onMouseOver={this.props.handleIconHover} 
-                            onMouseLeave={this.props.handleIconHoverOff} 
-                            src={EmailIcon} 
-                            alt="email"
-                        />
-                    </a>
-                </div>
+                
                 <div className="contact-title__wrapper">
-                    <h3 className="contact-title">Feel free to get </h3>
-                    <h3 className="contact-title__highlight">in touch.</h3>
+                    <h3 className="contact-title">Feel free to get in touch.</h3>
                 </div>
                 <form className="contact-form"  onSubmit={this.sendEmail} encType="text/plain">
                     <div className="contact-form__personal-info">
-                        <input className="contact-form__personal-info__name" placeholder="FULL NAME" required name="name" autoComplete="off"/>
-                        <input className="contact-form__personal-info__email" placeholder="EMAIL" required name="email" autoComplete="off"/>
+                        <input className="contact-form__personal-info__name" placeholder="Full name" required name="name" autoComplete="off"/>
+                        <input className="contact-form__personal-info__email" placeholder="Email" required name="email" autoComplete="off"/>
                     </div>
-                    <textarea className="contact-form__message" placeholder="WRITE YOUR MESSAGE HERE" maxLength="495" name="message" autoComplete="off" required/>  
+                    <textarea className="contact-form__message" placeholder="Write your message here" maxLength="495" name="message" autoComplete="off" required/>  
                     <button className="contact-form__submit">SEND</button>
                 </form>
+                <div className="feedback__wrapper">
+                    <h3 className="feedback__message">{this.state.feedbackMessage}</h3>
+                </div>
             </div>
         );
     }

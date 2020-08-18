@@ -18,6 +18,7 @@ import Footer from './components/layout/footer/Footer';
 import SiteIcon from './assets/imgs/site-logo.png';
 import SiteHoverIcon from './assets/imgs/site-logo-inverted.png';
 import GithubIcon from './assets/social-icons/github.png';
+import GithubIconAlt from './assets/social-icons/github-yellow.png';
 import GithubHoverIcon from './assets/social-icons/github-inverted-yellow.png';
 import LinkedInIcon from './assets/social-icons/linked-in.png';
 import LinkedInHoverIcon from './assets/social-icons/linked-in-inverted-yellow.png';
@@ -56,6 +57,9 @@ let handleIconHover = (e) => {
     else if (icon == "header-logo") {
         e.currentTarget.src = SiteHoverIcon;
     }
+    else if (icon == "featured-github-icon") {
+        e.currentTarget.src = GithubHoverIcon;
+    }
 }
 let handleIconHoverOff = (e) => {
     let icon = e.currentTarget.id;
@@ -81,6 +85,9 @@ let handleIconHoverOff = (e) => {
     else if (icon == "header-logo") {
         e.currentTarget.src = SiteIcon;
     }
+    else if (icon == "featured-github-icon") {
+        e.currentTarget.src = GithubIconAlt;
+    }
 }
 
 let headerOffSet;
@@ -98,9 +105,14 @@ let handleStickyHeader = (initialOffSet) => {
         body.classList.remove('sticky-body');
     }
 }
+
 window.onscroll = () => {
     handleStickyHeader(headerOffSet);
 };
+
+let handleActiveSection = () => {
+    
+}
 
 const routes = (
     <BrowserRouter>
@@ -110,6 +122,7 @@ const routes = (
                 handleIconHover={handleIconHover} 
                 handleIconHoverOff={handleIconHoverOff}
                 setHeaderOffSet={setHeaderOffSet}
+                onscroll={handleActiveSection}
             />
             <Switch>
                 <div id="body-content">

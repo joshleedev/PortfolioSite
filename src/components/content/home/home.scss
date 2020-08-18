@@ -1,11 +1,17 @@
 .home-content {
-    padding: 22rem 20rem 22rem 20rem;
+    padding: 22.75rem 20rem 22.75rem 20rem;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    min-width: 76vw;
+    max-width: 76vw;
 }
 
+.home-content__text-block {
+    padding-top: $xl-size;
+    margin-left: $xxl-size;
+}
 
-//Text block styling
 .home-content__text-block__title__wrapper {
     display: flex;
     flex-direction: row;
@@ -16,60 +22,31 @@
     color: $yellow;
 }
 
-
-//Skill section styling
-.skill-wrapper {
-    padding-right: $xxl-size;
-    padding-top: $l-size;
-    text-align: center;
-    width: 95%;
-}
-
-.skill-bar {
-    display: flex;
-    flex-direction: row;
-    margin-top: $m-size;
-}
-
-.skill-bar__title {
-    color: white;
-    background: $dark-gray;
-    padding: $xs-size 0;
-    width: 15%
-}
-
-.skill-bar__fill {
-    background: $yellow;
-}
-
-.css-percent, .html-percent {
-    width: 80%;
-}
-
-.react-percent, .js-percent {
-    width: 65%;
-}
-
-.node-percent {
-    width: 50%;
-}
-
-.skill-bar__empty {
-    background: $light-gray;
-    flex-grow: 3;   
-}
-
-.skill-bar__percent {
-    background: $light-gray;
-    text-align: center;
-    padding: $xs-size;
-    width: 5%;
+.home-content__text-block__body {
+    font-size: 2rem;
+    line-height: $l-size;
 }
 
 //Image Styling
+.home-content__image-wrapper {
+    position: relative;
+    text-align: center;
+    width: fit-content;
+}
+
 .home-content__image {
-    padding-top: $xxl-size;
-    width: 45%;
-    height: 45%;
+    padding-top: $m-size;
+    padding-right: $xxl-size;
+    width: 100%;
+    height: auto;
+    justify-self: right;
+}
+
+.carousel__wrapper-skills {
+    position: absolute;
+    top: 57%;
+    left: 37.5%;
+    padding: 0;
+    width: 25%;
 }
 

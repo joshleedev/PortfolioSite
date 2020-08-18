@@ -3,24 +3,18 @@ import Carousel from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 
 import ProjectItem from './../project-item/project-item';
-import FeaturedProject from './../featured-project/Featured-project';
+import FeaturedProject from '../featured-project/featured-project';
 import ProjectData from './../../../assets/json/projects.json';
 
-import PrevProject from './../../../assets/imgs/project-arrow-left.png';
-import PrevProjectHover from './../../../assets/imgs/project-arrow-left-inverted.png'
-import NextProject from './../../../assets/imgs/project-arrow-right.png';
-import NextProjectHover from './../../../assets/imgs/project-arrow-right-inverted.png';
-
-//test imgs
-import StockImage from './../../../assets/temp/stock/stock-1.jpeg';
 
 export default class ProjectList extends React.Component { 
     constructor(){
         super();
         this.state = {
             projectData: [],
-            featuredProjects: [],
+            featuredProject: [],
             projectList: [],
+            isEmpty: false,
             searchValue: ""
         }
         this.serveProjectHeap = this.serveProjectHeap.bind(this);
@@ -28,37 +22,38 @@ export default class ProjectList extends React.Component {
     }
 
     componentDidMount() {
-        let featuredProjects = [];
+        let featuredProject = [];
         let projectData = ProjectData.projects.map((project, key) => {
             let projectItem = 
-                <ProjectItem
-                    key={project.id}
-                    title={project.title}
-                    githubLink={project.githublink}
-                    techStack={project.techstack.join('/')}
-                    images={project.images}
-                    description={project.description}
-                    descriptionTwo={project.descriptionTwo}
-                    src={StockImage}
-                />
-            if(project.featured == "true"){
-                let featuredProject = 
+            <ProjectItem
+                key={project.id}
+                title={project.title}
+                githubLink={project.githublink}
+                techStack={project.techstack.join('/')}
+                image={project.image}
+                description={project.description} 
+                descriptionTwo={project.descriptionTwo}
+            />
+            if(project.featured === "true") {
+                let tempfeaturedProject = 
                     <FeaturedProject
                         key={project.id}
                         title={project.title}
                         githubLink={project.githublink}
                         techStack={project.techstack.join('/')}
-                        images={project.images}
+                        image={project.image}
                         description={project.description}
                         descriptionTwo={project.descriptionTwo}
-                        src={StockImage}
+                        handleIconHover={this.props.handleIconHover} 
+                        handleIconHoverOff={this.props.handleIconHoverOff}
                     />
-                featuredProjects.push(featuredProject);
+                featuredProject.push(tempfeaturedProject);
             }
             return projectItem;
         })
+
+        this.setState({featuredProject});
         this.setState({projectData});
-        this.setState({featuredProjects});
         this.setState({projectList: projectData});
     }
 
@@ -70,6 +65,7 @@ export default class ProjectList extends React.Component {
         const searchBorder = document.getElementById("search-bar");
         searchBorder.classList.remove('not-found');
         let projectList = [];
+        let isEmpty = false;
         let data = this.state.projectData;
 
         for(let j=0; j<data.length; j++) {
@@ -86,9 +82,10 @@ export default class ProjectList extends React.Component {
             }          
         }
         if(projectList.includes(undefined) || projectList.length == 0) {
-            projectList = this.state.projectData;
             searchBorder.classList.add('not-found');
+            isEmpty = true;
         }
+        this.setState({isEmpty});
         this.setState({projectList});
     }
 
@@ -116,26 +113,18 @@ export default class ProjectList extends React.Component {
                 <p className="arrow-disabled__text">&gt;</p>
             </div>
         );
-
+        
         return (
             <div id="projects-content" className="projects-content">
                 <div className="projects-content__featured">
                     <div className="projects-content__featured__title-wrapper">
-                        <h2 className="projects-content__featured__title-highlight">FEATURED</h2>
-                        <h2 className="projects-content__featured__title">PROJECTS</h2>
+                        <h2 className="projects-content__featured__title">FEATURED PROJECT</h2>
                     </div>
-                    <div className="projects-content__featured__projects-wrapper">
-                        {
-                            this.state.featuredProjects.map(project => {
-                                return project;
-                            })
-                        }
-                    </div>
+                    {this.state.featuredProject}
                 </div>
                 <div className="projects-content__heap">
                     <div className="projects-content__heap__title-wrapper">
-                        <h2 className="projects-content__heap__title">THE PROJECT</h2>
-                        <h2 className="projects-content__heap__title-highlight">HEAP</h2>
+                        <h2 className="projects-content__heap__title">THE PROJECT HEAP</h2>
                     </div>
                     <form className="projects-content__heap__search-form">
                         <input
@@ -147,18 +136,24 @@ export default class ProjectList extends React.Component {
                             onChange={this.handleSearch}
                         />
                     </form>
-                    <div className="carousel__wrapper">
-                        <Carousel
-                            slides={this.state.projectList}
-                            slidesPerScroll="3"
-                            slidesPerPage="3"
-                            arrowLeft={leftArrow}
-                            arrowLeftDisabled={leftArrowDisabled}
-                            arrowRight={rightArrow}
-                            arrowRightDisabled={rightArrowDisabled}
-                            addArrowClickHandler
-                        /> 
-                    </div>
+                        {this.state.isEmpty ?
+                            <div className="search-bar__feedback__wrapper"> 
+                                <h3 className="search-bar__feedback">No matches found.</h3>
+                            </div>
+                        : 
+                        <div className="carousel__wrapper">
+                            <Carousel
+                                slides={this.state.projectList}
+                                slidesPerScroll="3"
+                                slidesPerPage="3"
+                                arrowLeft={leftArrow}
+                                arrowLeftDisabled={leftArrowDisabled}
+                                arrowRight={rightArrow}
+                                arrowRightDisabled={rightArrowDisabled}
+                                addArrowClickHandler
+                            /> 
+                        </div>
+                    }
                 </div>
             </div>
         );

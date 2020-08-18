@@ -14,22 +14,6 @@
     height: 22rem;
 }
 
-.featured__img {
-    width: 33rem;
-    height: 20rem;
-    border: none;
-}
-
-.featured {
-    transition: all 0.1s ease-in-out;
-}
-
-.featured:hover {
-    border: 1px solid $yellow;
-    transform: scale(1.1);
-    z-index: 1;
-}
-
 .project-overlay {
     position: absolute;
     display: flex;
@@ -81,13 +65,13 @@
     display: flex;
     flex-direction: column;
     width: 60rem;
-    height: 70rem;
 }
 
 .modal-img-wrapper {
     position: relative;
     width: inherit;
     height: 35rem;
+    object-fit: cover;
 }
 
 .modal-img {
@@ -120,38 +104,59 @@
     width: inherit;
     height: auto;
     align-items: baseline;
-    background-color: $light-gray;
+    background-color: $yellow;
 }
 
 .modal-title {
+    font-size: $m-size;
     margin: 0;
     color: white;
     background-color: $dark-gray;
-    padding: $xs-size $m-size $xs-size $m-size;
+    padding: $xs-size $m-size $xs-size $xl-size;
+    min-width: 52%;
+    letter-spacing: $xs-size;
 }
 
 .modal-stack {
     margin: 0;
     color: $dark-gray;
-    padding: $xs-size $m-size $xs-size $m-size;
+    padding: $xs-size $xl-size $xs-size $m-size;
+    letter-spacing: $xs-size;
+    font-size: $s-size;
 }
 
 .modal-body-wrapper {
-    padding: $m-size;
+    padding: $m-size $xl-size;
+    background-color: $light-gray;
 }
 
 .github-wrapper {
     display: flex;
     flex-direction: row;
-    padding: 0 $m-size;
+    padding: 0 $m-size $m-size $xl-size;
+    background-color: $light-gray;
+}
+
+.github-wrapper a {
+    text-decoration: none;
+    outline: none;
+    color: $dark-gray;
 }
 
 .github-icon {
-    width: $xxl-size;
+    width: $l-size;
     align-self: center;
     padding-right: $s-size;
 }
 
+.github-link {
+    font-size: $m-size;
+}
+
 #test {
-    background: $dark-gray  ;
+    background: $yellow;
+    position: absolute;
+    top: 0;
+    right: 0;
+    outline: none;
 }

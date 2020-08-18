@@ -23,5 +23,6 @@ input:focus::placeholder {
 }
 
 h2 {
-    text-decoration: underline;
+    font-size: $l-size;
+    letter-spacing: $s-size;
 }

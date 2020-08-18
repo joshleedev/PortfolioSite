@@ -7,14 +7,14 @@ export default () => (
     <div className="landing-content" id="landing-content">
         <img className="landing-content__img" src={SiteLogo}/>
         <h1 className="landing-text-wrapper">     
-            <TextLoop className="animted-text">
+            <TextLoop className="animated-text">
                 <span> </span>
-                <span>Software</span>
-                <span>Creative</span>
-                <span>JavaScript</span>
-                <span>Passionate</span>
-                <span>React</span>
-                <span>Node.js</span>
+                <span className="animated-text">Software</span>
+                <span className="animated-text">Creative</span>
+                <span className="animated-text">JavaScript</span>
+                <span className="animated-text">Passionate</span>
+                <span className="animated-text">React</span>
+                <span className="animated-text">Node.js</span>
             </TextLoop>{" "}
             Developer
         </h1>

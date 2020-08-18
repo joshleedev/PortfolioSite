@@ -4,6 +4,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 55vh;
+    max-height: 55vh;
 }
 
 .contact-title__wrapper {
@@ -18,6 +20,10 @@
 
 .contact__social-wrapper {
     padding: 0;
+}
+
+.contact__title {
+    margin-bottom: 0;
 }
 
 .contact__social-link {
@@ -65,4 +71,8 @@ input:focus, textarea:focus {
     color: $yellow;
     background: white;
     border: 1px solid $yellow;
+}
+
+.feedback__message {
+    color: $yellow;
 }

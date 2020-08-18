@@ -1,14 +1,6 @@
 import React from 'react';
 import Modal from 'react-responsive-modal';
-import Carousel from '@brainhubeu/react-carousel';
-
 import GitHubIcon from './../../../assets/social-icons/github.png';
-import NextImgButton from './../../../assets/imgs/project-arrow-right.png';
-import PrevImgButton from './../../../assets/imgs/project-arrow-left.png';
-
-import StockImg1 from './../../../assets/temp/stock/stock-1.jpeg';
-import StockImg2 from './../../../assets/temp/stock/stock-2.jpeg';
-import StockImg3 from './../../../assets/temp/stock/stock-3.jpeg';
 
 
 export default class ProjectItem extends React.Component {
@@ -18,7 +10,7 @@ export default class ProjectItem extends React.Component {
             isHovered: false,
             open: false
         }
-    }
+    };
 
     onOpenModal = () => {
         this.setState(({ open: true }));
@@ -43,7 +35,7 @@ export default class ProjectItem extends React.Component {
 
         return (
             <div className="project-wrapper" onMouseOver={this.handleProjectHoverOn} onMouseLeave={this.handleProjectHoverOff}>
-                <img className="project__img" src={StockImg1}/>
+                <img className="project__img" src={this.props.image}/>
                 <div className="project-overlay">
                     {this.state.isHovered && <h3 className="project-title">{this.props.title}</h3>}
                     {this.state.isHovered && <p className="project-tech">{this.props.techStack}</p>}
@@ -52,11 +44,7 @@ export default class ProjectItem extends React.Component {
                 <Modal open={open} onClose={this.onCloseModal} center classNames={{ modal: 'modal-wrapper' }} closeIconId="test">
                     <div className="modal-content">
                         <div className="modal-img-wrapper">
-                            <Carousel>
-                                <img src={StockImg1}/>
-                                <img src={StockImg2}/>
-                                <img src={StockImg3}/>
-                            </Carousel>
+                            <img className="modal-img" src={this.props.image}/>
                         </div>
                         <div className="modal-title-wrapper">
                             <h2 className="modal-title">{this.props.title}</h2>
@@ -71,8 +59,12 @@ export default class ProjectItem extends React.Component {
                             </p>
                         </div>
                         <div className="github-wrapper">
-                            <img className="github-icon" src={GitHubIcon} />
-                            <h3 className="github-link">{this.props.githubLink}</h3>
+                            <a className="github-icon" href={this.props.githubLink} target="_blank">
+                                <img className="github-icon" src={GitHubIcon}/>
+                            </a>
+                            <a className="github-link" href={this.props.githubLink} target="_blank">
+                                <h3 className="github-link">{this.props.githubLink}</h3>
+                            </a>  
                         </div>
                     </div>
                 </Modal>

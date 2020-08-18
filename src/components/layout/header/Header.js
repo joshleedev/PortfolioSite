@@ -14,8 +14,30 @@ export default class Header extends React.Component {
     }
 
     componentDidMount() {
+        window.addEventListener('scroll', this.handleActiveSection);
         return this.props.setHeaderOffSet(document.getElementById("header").offsetTop);
     }
+
+    /*
+    handleActiveSection() {
+       let offset = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop
+        if(offset < 10) {
+            document.location.hash = "#landing-content"
+        }
+        else if(offset > 955 && offset < 1000 ) {
+        document.location.hash = "#home-content"
+        }
+        else if(offset > 1980 && offset < 2020) {
+        document.location.hash = "#projects-content"
+        }
+        else if(offset > 3000 && offset < 3050) {
+            document.location.hash = "#cv-content"
+        }
+        else if(offset > 4550) {
+            document.location.hash = "#footer-content"
+        }
+    }
+    */
 
     render() {
         return (
@@ -30,13 +52,12 @@ export default class Header extends React.Component {
                             src={SiteLogo}        
                         />
                     </NavLink>
-                    
                     <div className="header__content-section">
                         <div className="header__content-section__site-link-wrapper">
-                            <NavLink className={document.location.hash == "#home-content" ? "header__content-section__site-link site-link-active" : "header__content-section__site-link"} to="#home-content">HOME</NavLink>
-                            <NavLink className={document.location.hash == "#projects-content" ? "header__content-section__site-link site-link-active" : "header__content-section__site-link"} to="#projects-content">PROJECTS</NavLink>
-                            <NavLink className={document.location.hash == "#cv-content" ? "header__content-section__site-link site-link-active" : "header__content-section__site-link"} to="#cv-content">CV</NavLink>
-                            <NavLink className={document.location.hash == "#footer-content" ? "header__content-section__site-link site-link-active" : "header__content-section__site-link"} to="#footer-content">CONTACT</NavLink>
+                            <NavLink className="header__content-section__site-link" activeClassName="site-link-active" to="#home-content">ABOUT</NavLink>
+                            <NavLink className="header__content-section__site-link" to="#projects-content">PROJECTS</NavLink>
+                            <NavLink className="header__content-section__site-link" to="#cv-content">CV</NavLink>
+                            <NavLink className="header__content-section__site-link" to="#footer-content">CONTACT</NavLink>
                         </div>
                         <div className="header__content-section__social-link-wrapper">
                             <a href="https://github.com/joshleedev" target="_blank">

@@ -12,7 +12,7 @@ export default class Footer extends React.Component {
     render() {
         return (
             <div id="footer-content" className="footer-content">
-                <NavLink className="reset-button" to="#home-content">
+                <NavLink className="reset-button" to="#landing-content">
                     <img
                         id="return-top"
                         className="reset-img"

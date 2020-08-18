@@ -1,5 +1,5 @@
 .projects-content {
-    padding: 15rem 10rem;
+    padding: 12rem 10rem;
     background-color: $off-white;
     display: flex;
     flex-direction: column;
@@ -11,9 +11,8 @@
     padding-bottom: $l-size;
 }
 
-.projects-content__featured__title-highlight {
-    color: $yellow;
-    padding-right: $xs-size;
+.projects-content__featured__title-wrapper {
+    padding-bottom: $m-size;
 }
 
 .projects-content__featured__projects-wrapper {
@@ -76,11 +75,25 @@
 //CAROUSEL STYLING
 
 .carousel__wrapper {
-    padding: $m-size 0;
+    padding: $l-size 0 $m-size 0 ;
     width: 70vw;
+    min-width: 70vw;
 }
 
+.search-bar__feedback__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+    min-width: 70vw;
+    min-height: 16vw;
+    max-height: 16vw;
+}
 
+.brainhubCarousel {
+    display: flex; 
+    align-items: space-between;
+}
 
 
 //CUSTOM ARROW STYLING
@@ -92,7 +105,7 @@
     background: $yellow;
     border: 1px solid $yellow;
     width: 4rem;
-    height: 4rem;
+    height: 21.8rem;
     cursor: pointer;
     color: $off-white;
 }
