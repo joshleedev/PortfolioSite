@@ -51,12 +51,11 @@ export default class ProjectList extends React.Component {
             }
             return projectItem;
         })
-
         this.setState({featuredProject});
         this.setState({projectData});
         this.setState({projectList: projectData});
     }
-
+    
     handleSearch(e){
         this.setState({searchValue: e.target.value}, this.serveProjectHeap)
     }

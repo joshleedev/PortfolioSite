@@ -34,7 +34,6 @@ import NextProjectHoverIcon from './assets/imgs/project-arrow-right-inverted.png
 
 let handleIconHover = (e) => {
     let icon = e.currentTarget.id;
-    console.log(icon);
 
     if(icon == "github-icon") {
         e.currentTarget.src = GithubHoverIcon;

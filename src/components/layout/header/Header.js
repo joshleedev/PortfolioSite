@@ -11,33 +11,58 @@ import EmailIcon from './../../../assets/social-icons/email.png';
 export default class Header extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            currentSection: 'header-logo'
+        }
+        this.handleActiveSection = this.handleActiveSection.bind(this);
     }
 
     componentDidMount() {
         window.addEventListener('scroll', this.handleActiveSection);
         return this.props.setHeaderOffSet(document.getElementById("header").offsetTop);
     }
-
-    /*
+   
     handleActiveSection() {
-       let offset = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop
-        if(offset < 10) {
-            document.location.hash = "#landing-content"
+       let offset = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+       console.log(offset);
+       let currentSection = this.state.currentSection;
+       let currentSectionClassList = document.getElementById(this.state.currentSection).classList;
+    
+        if(offset <= 499) {
+            if(currentSection != "header-logo") { currentSectionClassList.toggle("site-link-active"); }
+            currentSection = "header-logo";
         }
-        else if(offset > 955 && offset < 1000 ) {
-        document.location.hash = "#home-content"
+        else if(offset >= 500 && offset < 1500 ) {
+            if(currentSection != "header-logo") { currentSectionClassList.toggle("site-link-active"); }
+            document.getElementById("#nav-about").classList.add('site-link-active');
+            currentSection = "#nav-about";
         }
-        else if(offset > 1980 && offset < 2020) {
-        document.location.hash = "#projects-content"
+        else if(offset >= 1501 && offset < 2600) {
+            if(currentSection != "header-logo") { currentSectionClassList.toggle("site-link-active"); }
+            document.getElementById("#nav-projects").classList.add('site-link-active');
+            currentSection = "#nav-projects";
         }
-        else if(offset > 3000 && offset < 3050) {
-            document.location.hash = "#cv-content"
+        else if(offset >= 2601 && offset < 4200) {
+            if(currentSection != "header-logo") { currentSectionClassList.toggle("site-link-active"); }
+            document.getElementById("#nav-cv").classList.add('site-link-active');
+            currentSection = "#nav-cv";
         }
-        else if(offset > 4550) {
-            document.location.hash = "#footer-content"
+        else if(offset >= 4201) {
+            if(currentSection != "header-logo") { currentSectionClassList.toggle("site-link-active"); }
+            document.getElementById("#nav-contact").classList.add('site-link-active');
+            currentSection = "#nav-contact";
         }
+        this.setState({currentSection});
     }
-    */
+
+    removeActiveSection() {
+        document.getElementById("#nav-about").classList.remove('site-link-active');
+        document.getElementById("#nav-projects").classList.remove('site-link-active');
+        document.getElementById("#nav-cv").classList.remove('site-link-active');
+        document.getElementById("#nav-contact").classList.remove('site-link-active');
+    } 
+    
+    
 
     render() {
         return (
@@ -54,10 +79,10 @@ export default class Header extends React.Component {
                     </NavLink>
                     <div className="header__content-section">
                         <div className="header__content-section__site-link-wrapper">
-                            <NavLink className="header__content-section__site-link" activeClassName="site-link-active" to="#home-content">ABOUT</NavLink>
-                            <NavLink className="header__content-section__site-link" to="#projects-content">PROJECTS</NavLink>
-                            <NavLink className="header__content-section__site-link" to="#cv-content">CV</NavLink>
-                            <NavLink className="header__content-section__site-link" to="#footer-content">CONTACT</NavLink>
+                            <NavLink className="header__content-section__site-link" id="#nav-about" to="#home-content">ABOUT</NavLink>
+                            <NavLink className="header__content-section__site-link" id="#nav-projects" to="#projects-content">PROJECTS</NavLink>
+                            <NavLink className="header__content-section__site-link" id="#nav-cv" to="#cv-content">CV</NavLink>
+                            <NavLink className="header__content-section__site-link" id="#nav-contact" to="#footer-content">CONTACT</NavLink>
                         </div>
                         <div className="header__content-section__social-link-wrapper">
                             <a href="https://github.com/joshleedev" target="_blank">
