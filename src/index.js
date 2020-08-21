@@ -8,7 +8,6 @@ import NotFound from './components/content/not-found/Not-found';
 import Header from './components/layout/header/Header';
 import Landing from './components/content/landing/Landing';
 import Home from './components/content/home/Home';
-import Blog from './components/content/blog/Blog';
 import ProjectList from './components/content/project-list/Project-list';
 import Cv from './components/content/cv/Cv';
 import Contact from './components/content/contact/Contact';
@@ -109,10 +108,6 @@ window.onscroll = () => {
     handleStickyHeader(headerOffSet);
 };
 
-let handleActiveSection = () => {
-    
-}
-
 const routes = (
     <BrowserRouter>
         <div>
@@ -121,7 +116,6 @@ const routes = (
                 handleIconHover={handleIconHover} 
                 handleIconHoverOff={handleIconHoverOff}
                 setHeaderOffSet={setHeaderOffSet}
-                onscroll={handleActiveSection}
             />
             <Switch>
                 <div id="body-content">

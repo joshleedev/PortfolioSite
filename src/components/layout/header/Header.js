@@ -55,12 +55,6 @@ export default class Header extends React.Component {
         this.setState({currentSection});
     }
 
-    removeActiveSection() {
-        document.getElementById("#nav-about").classList.remove('site-link-active');
-        document.getElementById("#nav-projects").classList.remove('site-link-active');
-        document.getElementById("#nav-cv").classList.remove('site-link-active');
-        document.getElementById("#nav-contact").classList.remove('site-link-active');
-    } 
     
     
 

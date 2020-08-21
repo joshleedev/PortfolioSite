@@ -1,22 +1,21 @@
 {
     "projects": [
-
         {
             "id":"1",
             "title":"Esports Portfolio Site",
             "githublink":"",
             "techstack":["React", "HTML", "CSS"],
-            "image": "https://s3.eu-west-2.amazonaws.com/joshlee.codes/images/Project+Test/stock-1.jpeg",
+            "image": "https://s3.eu-west-2.amazonaws.com/joshlee.codes/images/Project+Test/esports-portfolio.png",
             "description":"A personal portfolio website developed for a prominent Esports professional. Due to the demands simply requiring a static website, the focus of this project was placed towards design and user experience.",
             "descriptionTwo":"Tasked with creating an modern portfolio that was both minimalistic and eye catching. Displaying not only team rankings and achievments, but also solidfying it as a personal portfolio via the use of media.", 
-            "featured":"false"
+            "featured":"true"
         },
         {
             "id":"2",
             "title":"Personal Portfolio Site",
             "githublink":"https://github.com/joshleedev/PortfolioSite",
             "techstack":["React", "HTML", "CSS"],
-            "image": "https://s3.eu-west-2.amazonaws.com/joshlee.codes/images/Project+Test/stock-2.jpeg",
+            "image": "https://s3.eu-west-2.amazonaws.com/joshlee.codes/images/Project+Test/portfolio-site.png",
             "description":"The website you are currently on, my very own portfolio site. Developed to dislpay projects, blog posts and other relevant information I wish to share.",
             "descriptionTwo":"Ensuring the site was written in a way to encourage further development was important, in addition to generating content dynamically - allowing aspects like the number of projects to be a changing variable.",
             "featured":"false"
@@ -26,17 +25,17 @@
             "title":"LEGO Rubik's Cube Solver",
             "githublink":"https://github.com/joshleedev/3YP-RubikCubeSolver",
             "techstack":["MATLAB"],
-            "image": "https://s3.eu-west-2.amazonaws.com/joshlee.codes/images/Project+Test/stock-3.jpeg",
+            "image": "https://s3.eu-west-2.amazonaws.com/joshlee.codes/images/Project+Test/cube-solver.png",
             "description":"This was my dissertation and final project of my studies while at university. It ties together multiple interesting areas - the two main sections being robotics/automation with the charming mathematical puzzle of the Rubik’s cube. ",
             "descriptionTwo":"Colour detection and recognition provided the most challenge during this project, due to issues such as glare impeding accurate results.",
-            "featured":"true"
+            "featured":"false"
         },
         {
             "id":"4",
             "title":"VoIP System",
             "githublink":"https://github.com/joshleedev/VoIP-System",
             "techstack":["Java"],
-            "image": "https://s3.eu-west-2.amazonaws.com/joshlee.codes/images/Project+Test/stock-4.jpeg",
+            "image": "https://s3.eu-west-2.amazonaws.com/joshlee.codes/images/Project+Test/voip.png",
             "description":"During the Networks module at University, I was tasked to design and implement a VoIP communication system. Given a set of data-gram sockets with a variety of faulty conditions.",
             "descriptionTwo":"Each socket was analysised, diagnosed and the appropriate solution was implemented. An exmaple of this being packet-loss, solved via the use of interleaving.",
             "featured":"false"
@@ -46,7 +45,7 @@
             "title":"Augmented Reality App",
             "githublink":"https://github.com/joshleedev/SE2-AugmentedRealityApp",
             "techstack":["Java", "HTML", "CSS"],
-            "image": "https://s3.eu-west-2.amazonaws.com/joshlee.codes/images/Project+Test/stock-1.jpeg",
+            "image": "https://s3.eu-west-2.amazonaws.com/joshlee.codes/images/Project+Test/ar-app.png",
             "description":"Each year the University of East Anglia holds on Open Day, allowing non-students in to explore the campus and its facilities. We were tasked with producing applications that may be useful for these visitors.",
             "descriptionTwo":"An Augmented Reality application seemed like a stretch given the timeframe - but after some research and crafty workarounds it was achievable - allowing visitors to retrieve information about spots around campus on the go!",
             "featured":"false"
@@ -56,7 +55,7 @@
             "title":"Room Finder App",
             "githublink":"https://github.com/joshleedev/SE2-RoomFinderApp",
             "techstack":["Java", "HTML", "CSS"],
-            "image": "https://s3.eu-west-2.amazonaws.com/joshlee.codes/images/Project+Test/stock-2.jpeg",
+            "image": "https://s3.eu-west-2.amazonaws.com/joshlee.codes/images/Project+Test/room-finder.png",
             "description":"Each year the University of East Anglia holds on Open Day, allowing non-students in to explore the campus and its facilities. We were tasked with producing applications that may be useful for these visitors.",
             "descriptionTwo":"Exploring a new campus can be daunting, especially with UEA's many walkways -  the Room finder application ensures users can find their way around campus, incase they're seperated from their guide or simply want to focus on the areas that interest them.",
             "featured":"false"
@@ -66,7 +65,7 @@
             "title":"Car Finder App",
             "githublink":"https://github.com/joshleedev/SE2-CarLocationApp",
             "techstack":["Java", "HTML", "CSS"],
-            "image": "https://s3.eu-west-2.amazonaws.com/joshlee.codes/images/Project+Test/stock-3.jpeg",
+            "image": "https://s3.eu-west-2.amazonaws.com/joshlee.codes/images/Project+Test/car-finder.png",
             "description":"Each year the University of East Anglia holds on Open Day, allowing non-students in to explore the campus and its facilities. We were tasked with producing applications that may be useful for these visitors.",
             "descriptionTwo":"After spending the entire day walking around a new cammpus, the last thing you want it to walk around it again, trying to remember where you parked. Thanks to this app, remembering where you parked is a problem of the past.",
             "featured":"false"
@@ -74,9 +73,9 @@
         {
             "id":"8",
             "title":"Image Categorisation",
-            "githublink":"https://github.com/joshleedev/SE2-RoomFinderApp",
+            "githublink":"https://github.com/joshleecodes/Image-categorisation",
             "techstack":["MATLAB"],
-            "image": "https://s3.eu-west-2.amazonaws.com/joshlee.codes/images/Project+Test/stock-4.jpeg",
+            "image": "https://s3.eu-west-2.amazonaws.com/joshlee.codes/images/Project+Test/image-categorisation.png",
             "description":"There are a large range on imagge recognition techniques available, in this assessment I was asked to implement some of them and compare the results.",
             "descriptionTwo":"To test the different algortms, I fed each one the same set of training and test data. The two main algorthms discussed are kNN and SVM.",
             "featured":"false"

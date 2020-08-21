@@ -27,7 +27,8 @@
 }
 
 .project-overlay:hover {
-    opacity: 90%;
+    opacity: initial;   
+    z-index: 1;
 }
 
 .project-title {
@@ -51,6 +52,7 @@
     border: 1px solid $yellow;
     opacity: 120%;
     transition: all 0.2s ease-in-out;
+    z-index: 1;
 }
 
 .project-view:hover {
