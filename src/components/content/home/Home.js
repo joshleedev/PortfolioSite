@@ -1,5 +1,6 @@
 import React from 'react';
-import Carousel, { autoplayPlugin } from '@brainhubeu/react-carousel';
+import Carousel from '@brainhubeu/react-carousel';
+
 import ProjectData from './../../../assets/json/projects.json';
 import CodingIcon from '../../../assets/imgs/coding-icon-display.png';
 
@@ -18,16 +19,16 @@ export default class Home extends React.Component {
     };
     
     componentDidMount(){
-        let skillImages = [];
+        const skillImages = [];
         skillImages[0] = <img src={ReactText} />
         skillImages[1] = <img src={NodeText} />
         skillImages[2] = <img src={HtmlText} />
         skillImages[3] = <img src={CssText} />
         this.setState({skillImages});
-
+        
         let skillList = [];
         let listedTech = [];
-
+            
         ProjectData.projects.map((project, key) => {
             project.techstack.forEach(tech => {
                 if(listedTech.includes(tech) !== true) {
@@ -43,7 +44,7 @@ export default class Home extends React.Component {
     render(){
         return (
             <div id="home-content" className="home-content">
-                <div className="home-content__text-block">
+                <div className="home-content__text-block" data-aos="fade-right" data-aos-duration="1500">
                     <div className="home-content__text-block__title__wrapper">
                         <h2 className="home-content__text-block__title">ABOUT ME</h2>
                     </div>
@@ -57,7 +58,7 @@ export default class Home extends React.Component {
                     I am seeking exposure to modern web technologies, with a tech stack centred around React and NodeJS.
                     </p>
                 </div>
-                <div className="home-content__image-wrapper">
+                <div className="home-content__image-wrapper" data-aos="fade-left" data-aos-duration="1500">
                     <img className="home-content__image" src={CodingIcon} alt="coding-logo"/>
                     <div className="carousel__wrapper-skills">
                         <Carousel

@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 //Component Imports
 import './index.scss';
@@ -30,6 +32,7 @@ import PrevProjectHoverIcon from './assets/imgs/project-arrow-left-inverted.png'
 import NextProjectIcon from './assets/imgs/project-arrow-right.png';
 import NextProjectHoverIcon from './assets/imgs/project-arrow-right-inverted.png';
 
+AOS.init();
 
 let handleIconHover = (e) => {
     let icon = e.currentTarget.id;
@@ -59,6 +62,7 @@ let handleIconHover = (e) => {
         e.currentTarget.src = GithubHoverIcon;
     }
 }
+
 let handleIconHoverOff = (e) => {
     let icon = e.currentTarget.id;
 

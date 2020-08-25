@@ -115,13 +115,13 @@ export default class ProjectList extends React.Component {
         
         return (
             <div id="projects-content" className="projects-content">
-                <div className="projects-content__featured">
+                <div className="projects-content__featured" data-aos="fade-right" data-aos-duration="1200">
                     <div className="projects-content__featured__title-wrapper">
                         <h2 className="projects-content__featured__title">FEATURED PROJECT</h2>
                     </div>
                     {this.state.featuredProject}
                 </div>
-                <div className="projects-content__heap">
+                <div className="projects-content__heap" data-aos="fade-left" data-aos-duration="1200">
                     <div className="projects-content__heap__title-wrapper">
                         <h2 className="projects-content__heap__title">THE PROJECT HEAP</h2>
                     </div>

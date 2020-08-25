@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { HashLink as NavLink } from 'react-router-hash-link';
 
 //Icon Imports
@@ -24,7 +23,6 @@ export default class Header extends React.Component {
    
     handleActiveSection() {
        let offset = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
-       console.log(offset);
        let currentSection = this.state.currentSection;
        let currentSectionClassList = document.getElementById(this.state.currentSection).classList;
     
@@ -60,7 +58,7 @@ export default class Header extends React.Component {
 
     render() {
         return (
-            <div id="header" className="header">
+            <div id="header" className="header" data-aos="fade" data-aos-easing="ease-in-sine" data-aos-duration="1200" data-aos-delay="1000">
                 <div className="header__container">
                     <NavLink to="#landing-content">
                         <img 

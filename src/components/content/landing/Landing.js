@@ -4,9 +4,9 @@ import TextLoop from 'react-text-loop';
 import SiteLogo from './../../../assets/imgs/site-logo.png';
 
 export default () => (
-    <div className="landing-content" id="landing-content">
+    <div className="landing-content" id="landing-content" data-aos="flip-right" data-aos-duration="1200">
         <img className="landing-content__img" src={SiteLogo}/>
-        <h1 className="landing-text-wrapper">     
+        <h1 className="landing-text-wrapper" data-aos="fade" data-aos-duraction="1200" data-aos-delay="1000">     
             <TextLoop className="animated-text">
                 <span> </span>
                 <span className="animated-text">Software</span>
