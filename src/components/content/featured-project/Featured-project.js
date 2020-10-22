@@ -1,5 +1,5 @@
 import React from 'react';
-import GitHubIcon from './../../../assets/social-icons/github-yellow.png';
+import GitHubIcon from './../../../assets/imgs/SVG/social-icons/github/github.svg';
 
 export default class FeaturedProject extends React.Component {
     constructor(props) {

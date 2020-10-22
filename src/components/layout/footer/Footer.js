@@ -1,8 +1,9 @@
 import React from 'react';
 import { HashLink as NavLink } from 'react-router-hash-link';
+import { scrollToTop } from './../../../util/scrollHelper';
 
 //Icon Imports
-import UpButton from './../../../assets/imgs/up-arrow.png';
+import UpButton from './../../../assets/imgs/SVG/arrow-icons/returnTop.svg';
 
 export default class Footer extends React.Component {
     constructor(props) {
@@ -12,7 +13,7 @@ export default class Footer extends React.Component {
     render() {
         return (
             <div id="footer-content" className="footer-content">
-                <NavLink className="reset-button" to="#landing-content">
+                <NavLink className="reset-button" to="#landing-content" onClick={scrollToTop}>
                     <img
                         id="return-top"
                         className="reset-img"

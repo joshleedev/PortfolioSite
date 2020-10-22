@@ -1,7 +1,6 @@
 import React from 'react';
 import Modal from 'react-responsive-modal';
-import GitHubIcon from './../../../assets/social-icons/github.png';
-
+import Github from './../../../assets/imgs/SVG/social-icons/github/github.svg';
 
 export default class ProjectItem extends React.Component {
     constructor(props) {
@@ -15,7 +14,7 @@ export default class ProjectItem extends React.Component {
     onOpenModal = () => {
         this.setState(({ open: true }));
     };
-     
+    
     onCloseModal = () => {
         this.setState({ open: false });
     };
@@ -24,15 +23,14 @@ export default class ProjectItem extends React.Component {
         let isHovered = true;
         this.setState( () => ({ isHovered }));
     };
-
+    
     handleProjectHoverOff = () => {
         let isHovered = false;
         this.setState(() => ({ isHovered }));
     };
-
+    
     render () {
         const { open } = this.state;
-
         return (
             <div className="project-wrapper" onMouseOver={this.handleProjectHoverOn} onMouseLeave={this.handleProjectHoverOff}>
                 <img className="project__img" src={this.props.image}/>
@@ -59,11 +57,11 @@ export default class ProjectItem extends React.Component {
                             </p>
                         </div>
                         <div className="github-wrapper">
-                            <a className="github-icon" href={this.props.githubLink} target="_blank">
-                                <img className="github-icon" src={GitHubIcon}/>
+                            <a className="modal-github-icon" href={this.props.githubLink} target="_blank">
+                                <img className="modal-github-icon" id="modal-github-icon" onMouseOver={this.props.handleIconHover} onMouseLeave={this.props.handleIconHoverOff} src={Github}/>
                             </a>
-                            <a className="github-link" href={this.props.githubLink} target="_blank">
-                                <h3 className="github-link">{this.props.githubLink}</h3>
+                            <a className="modal-github-link" href={this.props.githubLink} target="_blank">
+                                <h3 className="modal-github-link">{this.props.githubLink}</h3>
                             </a>  
                         </div>
                     </div>

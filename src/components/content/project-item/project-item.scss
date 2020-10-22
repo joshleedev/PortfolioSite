@@ -9,9 +9,9 @@
 }   
 
 .project__img {
-    background-size: cover;
     width: 36rem;
     height: 22rem;
+    object-fit: cover;
 }
 
 .project-overlay {
@@ -23,11 +23,11 @@
     opacity: 0%;
     width: 100%;
     height: 100%;
-    transition: opacity 0.4s;
+    transition: opacity 0.5s;
 }
 
 .project-overlay:hover {
-    opacity: initial;   
+    opacity: inherit;   
     z-index: 1;
 }
 
@@ -51,7 +51,6 @@
     padding: $xs-size;
     border: 1px solid $yellow;
     opacity: inherit;
-    transition: all 0.2s ease-in-out;
 }
 
 .project-view:hover {
@@ -144,13 +143,13 @@
     color: $dark-gray;
 }
 
-.github-icon {
+.modal-github-icon {
     width: $l-size;
     align-self: center;
     padding-right: $s-size;
 }
 
-.github-link {
+.modal-github-link {
     font-size: $m-size;
 }
 

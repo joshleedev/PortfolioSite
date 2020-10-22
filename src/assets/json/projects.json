@@ -6,8 +6,8 @@
             "githublink":"",
             "techstack":["React", "HTML", "CSS"],
             "image": "https://s3.eu-west-2.amazonaws.com/joshlee.codes/images/Project+Test/esports-portfolio.png",
-            "description":"A personal portfolio website developed for a prominent Esports professional. Due to the demands simply requiring a static website, the focus of this project was placed towards design and user experience.",
-            "descriptionTwo":"Tasked with creating an modern portfolio that was both minimalistic and eye catching. Displaying not only team rankings and achievments, but also solidfying it as a personal portfolio via the use of media.", 
+            "description":"A personal portfolio site created for a prominent Esports professional, developed using HTML/CSS and pure JavaScript. With a heavy focus on design and UX; resulting in a more unique and memorable experience.",
+            "descriptionTwo":"The client requested the design to minimalistic with edited pre-existing high quality media content adding visual flare to the site.", 
             "featured":"true"
         },
         {
@@ -16,8 +16,8 @@
             "githublink":"https://github.com/joshleedev/PortfolioSite",
             "techstack":["React", "HTML", "CSS"],
             "image": "https://s3.eu-west-2.amazonaws.com/joshlee.codes/images/Project+Test/portfolio-site.png",
-            "description":"The website you are currently on, my very own portfolio site. Developed to dislpay projects, blog posts and other relevant information I wish to share.",
-            "descriptionTwo":"Ensuring the site was written in a way to encourage further development was important, in addition to generating content dynamically - allowing aspects like the number of projects to be a changing variable.",
+            "description":"The site you are currently visiting - a place I can show off creative projects, blog interesting ideas or share relevant topics and handy guides i’ve found along the way.",
+            "descriptionTwo":"Developed using HTML/CSS and React, this project provided useful insight into new development practices, and the potential benefits of using these technologies when handling topics such as dynamically displaying content.",
             "featured":"false"
         },
         {
@@ -26,8 +26,8 @@
             "githublink":"https://github.com/joshleedev/3YP-RubikCubeSolver",
             "techstack":["MATLAB"],
             "image": "https://s3.eu-west-2.amazonaws.com/joshlee.codes/images/Project+Test/cube-solver.png",
-            "description":"This was my dissertation and final project of my studies while at university. It ties together multiple interesting areas - the two main sections being robotics/automation with the charming mathematical puzzle of the Rubik’s cube. ",
-            "descriptionTwo":"Colour detection and recognition provided the most challenge during this project, due to issues such as glare impeding accurate results.",
+            "description":"A project which tied together multiple areas which are of personal interest, using robotics for automation and mathematical or logical puzzles. As a child I was always intrigued by puzzles such as sudoku’s, the rules around them and the implications they can have when taken further - quickly indulging when given the opportunity to develop this project as my dissertation piece at university.",
+            "descriptionTwo":"Other notable parts of development were in regards to image categorisation in the form of colour recognition and detection.",
             "featured":"false"
         },
         {
@@ -36,8 +36,8 @@
             "githublink":"https://github.com/joshleedev/VoIP-System",
             "techstack":["Java"],
             "image": "https://s3.eu-west-2.amazonaws.com/joshlee.codes/images/Project+Test/voip.png",
-            "description":"During the Networks module at University, I was tasked to design and implement a VoIP communication system. Given a set of data-gram sockets with a variety of faulty conditions.",
-            "descriptionTwo":"Each socket was analysised, diagnosed and the appropriate solution was implemented. An exmaple of this being packet-loss, solved via the use of interleaving.",
+            "description":"VoIP systems are something I’ve personally used and taken for granted for a long time. This project provided hands on experience with the intricacies involved with both sending and receiving voice across the internet.",
+            "descriptionTwo":"Being given a variety of sockets, each one had to be analysed to identify any unwanted communication conditions, then researching and implementing solutions to provide a more functional system.",
             "featured":"false"
         },
         {
@@ -75,9 +75,9 @@
             "title":"Image Categorisation",
             "githublink":"https://github.com/joshleecodes/Image-categorisation",
             "techstack":["MATLAB"],
-            "image": "https://s3.eu-west-2.amazonaws.com/joshlee.codes/images/Project+Test/image-categorisation.png",
-            "description":"There are a large range on imagge recognition techniques available, in this assessment I was asked to implement some of them and compare the results.",
-            "descriptionTwo":"To test the different algortms, I fed each one the same set of training and test data. The two main algorthms discussed are kNN and SVM.",
+            "image": "https://s3.eu-west-2.amazonaws.com/joshlee.codes/images/Project+Test/image-categorisation-alt.png",
+            "description":"During the Computer Vision module I undertook at university, I was tasked with implementing Image Categorisation algorithms with mutatable parameters.",
+            "descriptionTwo":"Comparing different algorithms and testing parameters to achieve the highest accuracy of true positives possible.",
             "featured":"false"
         }
     ]

@@ -14,7 +14,7 @@ export default () => (
                 <span className="animated-text">JavaScript</span>
                 <span className="animated-text">Passionate</span>
                 <span className="animated-text">React</span>
-                <span className="animated-text">Node.js</span>
+                <span className="animated-text">Node.js</span> 
             </TextLoop>{" "}
             Developer
         </h1>

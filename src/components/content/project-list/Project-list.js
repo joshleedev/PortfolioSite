@@ -33,6 +33,8 @@ export default class ProjectList extends React.Component {
                 image={project.image}
                 description={project.description} 
                 descriptionTwo={project.descriptionTwo}
+                handleIconHover={this.props.handleIconHover} 
+                handleIconHoverOff={this.props.handleIconHoverOff}
             />
             if(project.featured === "true") {
                 let tempfeaturedProject = 
@@ -114,14 +116,14 @@ export default class ProjectList extends React.Component {
         );
         
         return (
-            <div id="projects-content" className="projects-content">
-                <div className="projects-content__featured" data-aos="fade-right" data-aos-duration="1200">
+            <div id="projects-content" className="projects-section">
+                <div className="projects-content__featured" data-aos="fade-right" data-aos-duration="1200" data-aos-anchor-placement="top-center" data-aos-once="true">
                     <div className="projects-content__featured__title-wrapper">
                         <h2 className="projects-content__featured__title">FEATURED PROJECT</h2>
                     </div>
                     {this.state.featuredProject}
                 </div>
-                <div className="projects-content__heap" data-aos="fade-left" data-aos-duration="1200">
+                <div className="projects-content__heap" data-aos="fade-left" data-aos-duration="1200" data-aos-anchor-placement="top-center" data-aos-once="true">
                     <div className="projects-content__heap__title-wrapper">
                         <h2 className="projects-content__heap__title">THE PROJECT HEAP</h2>
                     </div>

@@ -1,4 +1,4 @@
-.contact-content {
+.contact-section {
     padding: 15rem 10rem;
     background-color: $off-white;
     display: flex;
@@ -61,16 +61,17 @@ input:focus, textarea:focus {
     color: white;
     font-family: $body-font;
     font-size: $m-size;
-    width: 98%;
+    width: 50%;
     padding: $s-size;
     margin: $s-size;
     transition: all 0.2s ease-in-out;
 }
 
 .contact-form__submit:hover {
-    color: $yellow;
-    background: white;
+    color: none;
+    background: $yellow;
     border: 1px solid $yellow;
+    width: 98%;
 }
 
 .feedback__message {

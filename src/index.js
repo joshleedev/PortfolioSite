@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import './index.scss';
 
 //Component Imports
-import './index.scss';
 import NotFound from './components/content/not-found/Not-found';
 import Header from './components/layout/header/Header';
 import Landing from './components/content/landing/Landing';
@@ -18,19 +18,19 @@ import Footer from './components/layout/footer/Footer';
 //Icon imports
 import SiteIcon from './assets/imgs/site-logo.png';
 import SiteHoverIcon from './assets/imgs/site-logo-inverted.png';
-import GithubIcon from './assets/social-icons/github.png';
-import GithubIconAlt from './assets/social-icons/github-yellow.png';
-import GithubHoverIcon from './assets/social-icons/github-inverted-yellow.png';
-import LinkedInIcon from './assets/social-icons/linked-in.png';
-import LinkedInHoverIcon from './assets/social-icons/linked-in-inverted-yellow.png';
-import EmailIcon from './assets/social-icons/email.png';
-import EmailHoverIcon from './assets/social-icons/email-inverted-yellow.png';
-import ReturnTopIcon from './assets/imgs/up-arrow.png';
-import ReturnTopHoverIcon from './assets/imgs/up-arrow-inverted-yellow.png';
-import PrevProjectIcon from './assets/imgs/project-arrow-left.png';
-import PrevProjectHoverIcon from './assets/imgs/project-arrow-left-inverted.png'
-import NextProjectIcon from './assets/imgs/project-arrow-right.png';
-import NextProjectHoverIcon from './assets/imgs/project-arrow-right-inverted.png';
+
+
+//SVG Imports
+import Github from './assets/imgs/SVG/social-icons/github/github.svg';
+import GithubActive from './assets/imgs/SVG/social-icons/github/github-active.svg';
+import GithubAlt from './assets/imgs/SVG/social-icons/github/github-alt.svg';
+import Linkedin from './assets/imgs/SVG/social-icons/linkedin/linkedin.svg';
+import LinkedinActive from './assets/imgs/SVG/social-icons/linkedin/linkedin-active.svg';
+import Email from './assets/imgs/SVG/social-icons/email/email.svg';
+import EmailActive from './assets/imgs/SVG/social-icons/email/email-active.svg';
+
+import ReturnTop from './assets/imgs/SVG/arrow-icons/returnTop.svg';
+import ReturnTopActive from './assets/imgs/SVG/arrow-icons/returnTop-active.svg'
 
 AOS.init();
 
@@ -38,28 +38,25 @@ let handleIconHover = (e) => {
     let icon = e.currentTarget.id;
 
     if(icon == "github-icon") {
-        e.currentTarget.src = GithubHoverIcon;
+        e.currentTarget.src = GithubActive;
     }
     else if(icon == "linkedin-icon") {
-        e.currentTarget.src = LinkedInHoverIcon;
+        e.currentTarget.src = LinkedinActive;
     }
     else if(icon == "email-icon") {
-        e.currentTarget.src = EmailHoverIcon;
+        e.currentTarget.src = EmailActive;
     }
     else if(icon == "return-top") {
-        e.currentTarget.src = ReturnTopHoverIcon;
+        e.currentTarget.src = ReturnTopActive;
     }
-    else if(icon == "prev-project") {
-        e.currentTarget.src = PrevProjectHoverIcon;
-    }
-    else if(icon == "next-project") {
-        e.currentTarget.src = NextProjectHoverIcon;
-    }
-    else if (icon == "header-logo") {
+    else if (icon == "nav-landing") {
         e.currentTarget.src = SiteHoverIcon;
     }
     else if (icon == "featured-github-icon") {
-        e.currentTarget.src = GithubHoverIcon;
+        e.currentTarget.src = GithubActive;
+    }
+    else if (icon == "modal-github-icon") {
+        e.currentTarget.src = GithubAlt;
     }
 }
 
@@ -67,28 +64,25 @@ let handleIconHoverOff = (e) => {
     let icon = e.currentTarget.id;
 
     if(icon == "github-icon") {
-        e.currentTarget.src = GithubIcon;
+        e.currentTarget.src = Github;
     }
     else if(icon == "linkedin-icon") {
-        e.currentTarget.src = LinkedInIcon;
+        e.currentTarget.src = Linkedin;
     }
     else if(icon == "email-icon") {
-        e.currentTarget.src = EmailIcon;
+        e.currentTarget.src = Email;
     }
     else if(icon == "return-top") {
-        e.currentTarget.src = ReturnTopIcon;
+        e.currentTarget.src = ReturnTop;
     }
-    else if(icon == "prev-project") {
-        e.currentTarget.src = PrevProjectIcon;
-    }
-    else if(icon == "next-project") {
-        e.currentTarget.src = NextProjectIcon;
-    }
-    else if (icon == "header-logo") {
+    else if (icon == "nav-landing") {
         e.currentTarget.src = SiteIcon;
     }
     else if (icon == "featured-github-icon") {
-        e.currentTarget.src = GithubIconAlt;
+        e.currentTarget.src = Github;
+    }
+    else if (icon == "modal-github-icon") {
+        e.currentTarget.src = Github;
     }
 }
 
@@ -132,7 +126,7 @@ const routes = (
                         path="/" 
                         render={
                             (props) => 
-                                <ProjectList 
+                                <ProjectList
                                 handleIconHover={handleIconHover} 
                                 handleIconHoverOff={handleIconHoverOff}
                                 />

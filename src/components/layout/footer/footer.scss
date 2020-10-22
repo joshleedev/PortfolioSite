@@ -16,6 +16,9 @@
 .reset-img {
     width: $xl-size;
 }
+.reset-img:hover {
+    border-bottom: 2px solid $dark-gray;
+}
 
 .footer-signature-wrapper {
     display: flex;

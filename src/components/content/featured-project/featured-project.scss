@@ -18,8 +18,12 @@
 .github-icon {
     padding: 0;
     height: $l-size;
-    border: 1px solid white;
     margin-left: $s-size;
+    border-bottom: 2px solid $yellow;
+}
+
+.github-icon:hover {
+    border-bottom: 2px solid $dark-gray;
 }
 
 .github-link {

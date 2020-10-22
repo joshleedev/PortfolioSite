@@ -1,4 +1,4 @@
-.projects-content {
+.projects-section {
     padding: 10rem 10rem;
     background-color: $off-white;
     display: flex;
@@ -105,14 +105,16 @@
     background: $yellow;
     border: 1px solid $yellow;
     width: 4rem;
-    height: 21.8rem;
+    height: 8rem;
     cursor: pointer;
     color: $off-white;
+    transition: all 0.2s ease-in-out;
 }
 
 .arrow__wrapper:hover {
     background: none;
     color: $yellow;
+    height: 21.8rem;
 }
 
 .arrow__text {

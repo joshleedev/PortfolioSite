@@ -6449,6 +6449,11 @@ lodash.debounce@^4.0.6:
   resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
   integrity sha1-gteb/zCmfEAF/9XiUVMArZyk168=
 
+lodash.isequal@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
+  integrity sha1-QVxEePK8wwEgwizhDtMib30+GOA=
+
 lodash.memoize@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
@@ -8831,6 +8836,15 @@ react-spring@^8.0.27:
     "@babel/runtime" "^7.3.1"
     prop-types "^15.5.8"
 
+react-target-scroller@^0.1.14:
+  version "0.1.14"
+  resolved "https://registry.yarnpkg.com/react-target-scroller/-/react-target-scroller-0.1.14.tgz#7d8a092de7017a44efcd82b2a125d2f874122f1f"
+  integrity sha512-UBz23PJr7pr40hZH6qh1W8w589VWYnfZ+J1xkecq5YupVZDaN+/KzDbuO8Sj+wPfuSAltI/Tu/tkczDCzsEcLw==
+  dependencies:
+    lodash.isequal "^4.5.0"
+    prop-types "^15.6.1"
+    tweenkle "^0.2.2"
+
 react-text-loop@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/react-text-loop/-/react-text-loop-2.3.0.tgz#c4035b1f3fb8216b34ed93f3160025fc7b1af3b7"
@@ -9605,6 +9619,11 @@ simple-swizzle@^0.2.2:
   integrity sha1-pNprY1/8zMoz9w0Xy5JZLeleVXo=
   dependencies:
     is-arrayish "^0.3.1"
+
+sister@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/sister/-/sister-3.0.2.tgz#bb3e39f07b1f75bbe1945f29a27ff1e5a2f26be4"
+  integrity sha512-p19rtTs+NksBRKW9qn0UhZ8/TUI9BPw9lmtHny+Y3TinWlOa9jWh9xB0AtPSdmOy49NJJJSSe0Ey4C7h0TrcYA==
 
 sisteransi@^1.0.4:
   version "1.0.4"
@@ -10382,6 +10401,13 @@ tunnel-agent@^0.6.0:
   integrity sha1-J6XeoGs2sEoKmWZ3SykIaPD8QP0=
   dependencies:
     safe-buffer "^5.0.1"
+
+tweenkle@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/tweenkle/-/tweenkle-0.2.2.tgz#7e87a46c30ccf7b31eb8beff518d29edc7132d66"
+  integrity sha512-63X9OfVZ9l7FTgyQsUN+kvHunwTWpyRyXlBMegPwAB7fiGZ+aMJtOYCznCwfcxKhiAcP+3ymjzomqboPxcME3Q==
+  dependencies:
+    sister "^3.0.2"
 
 tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
