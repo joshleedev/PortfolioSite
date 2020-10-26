@@ -2,7 +2,7 @@ import React from 'react';
 import Carousel from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 
-import ProjectItem from '../project-item/Project-item';
+import ProjectItem from '../project-item/project-item';
 import FeaturedProject from '../featured-project/Featured-project';
 import ProjectData from './../../../assets/json/projects.json';
 

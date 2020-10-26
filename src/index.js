@@ -28,9 +28,15 @@ import Linkedin from './assets/imgs/SVG/social-icons/linkedin/linkedin.svg';
 import LinkedinActive from './assets/imgs/SVG/social-icons/linkedin/linkedin-active.svg';
 import Email from './assets/imgs/SVG/social-icons/email/email.svg';
 import EmailActive from './assets/imgs/SVG/social-icons/email/email-active.svg';
-
 import ReturnTop from './assets/imgs/SVG/arrow-icons/returnTop.svg';
 import ReturnTopActive from './assets/imgs/SVG/arrow-icons/returnTop-active.svg'
+
+//break points - width
+//landscape     576
+// tablet       768
+// laptop       1200
+// PC           1920
+// high res >   >1920
 
 AOS.init();
 
@@ -110,7 +116,7 @@ const routes = (
     <BrowserRouter>
         <div>
             <Landing/>
-            <Header 
+            <Header
                 handleIconHover={handleIconHover} 
                 handleIconHoverOff={handleIconHoverOff}
                 setHeaderOffSet={setHeaderOffSet}
@@ -133,11 +139,7 @@ const routes = (
                         }
                         exact={true}
                     />
-                    <Route
-                        path="/" 
-                        component={Cv} 
-                        exact={true}
-                    />
+                    
                     <Route
                         path="/" 
                         render={
