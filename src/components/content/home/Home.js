@@ -44,7 +44,7 @@ export default class Home extends React.Component {
     render(){
         return (
             <div id="home-content" className="home-section">
-                <div className="home-content__text-block" data-aos="fade-right" data-aos-duration="1500" data-aos-anchor="#projects-content" data-aos-once="true">
+                <div className="home-content__text-block">
                     <div className="home-content__text-block__title__wrapper">
                         <h2 className="home-content__text-block__title">ABOUT ME</h2>
                     </div>

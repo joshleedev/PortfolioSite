@@ -9,6 +9,9 @@ export default class FeaturedProject extends React.Component {
     render () {
         return (
             <div className="featured-projects__wrapper">
+                <div className="projects-content__featured__title-wrapper">
+                        <h2 className="projects-content__featured__title">FEATURED PROJECT</h2>
+                </div>
                 <img className="featured-project__image" src={this.props.image}/>
                 <div className="featured-project__body-wrapper">
                     <div className="featured-project__header-wrapper">

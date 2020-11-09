@@ -7,6 +7,8 @@ import SiteLogo from './../../../assets/imgs/SVG/site-logo.svg';
 import GithubIcon from './../../../assets/imgs/SVG/social-icons/github/github.svg';
 import LinkedInIcon from './../../../assets/imgs/SVG/social-icons/linkedin/linkedin.svg';
 import EmailIcon from './../../../assets/imgs/SVG/social-icons/email/email.svg';
+import MenuIcon from './../../../assets/imgs/SVG/menu-icons/menu.svg';
+import ExitMenuIcon from './../../../assets/imgs/SVG/menu-icons/cross.svg';
 
 export default class Header extends React.Component {
     constructor(props) {
@@ -56,7 +58,7 @@ export default class Header extends React.Component {
 
     render() {
         return (
-            <div id="header" className="header" data-aos="fade" data-aos-easing="ease-in-sine" data-aos-duration="1200" data-aos-delay="1000" data-aos-once="true">
+            <div id="header" className="header">
                 <div className="header__container">
                     <NavLink to="#landing-content" onClick={scrollToTop}>
                         <img 
@@ -65,7 +67,7 @@ export default class Header extends React.Component {
                             onClick={this.onNavLinkClick}
                             onMouseOver={this.props.handleIconHover} 
                             onMouseLeave={this.props.handleIconHoverOff}  
-                            src={SiteLogo}        
+                            src={SiteLogo}
                         />
                     </NavLink>
                     <div className="header__content-section">
@@ -75,7 +77,6 @@ export default class Header extends React.Component {
                             <NavLink className="header__content-section__site-link" id="#nav-cv" to="#cv-content"  onClick={scrollTo}>CV</NavLink>
                             <NavLink className="header__content-section__site-link" id="#nav-contact" to="#footer-content"  onClick={scrollTo}>CONTACT</NavLink>
                         </div>
-                        
                         <div className="header__content-section__social-link-wrapper">
                             <a href="https://github.com/joshleedev" target="_blank">
                                 <img
@@ -83,7 +84,7 @@ export default class Header extends React.Component {
                                     className="social-link-icon header__content-section__social-link"  
                                     onMouseOver={this.props.handleIconHover} 
                                     onMouseLeave={this.props.handleIconHoverOff} 
-                                    src={GithubIcon} 
+                                    src={GithubIcon}
                                     alt="github"
                                 />
                             </a>

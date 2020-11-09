@@ -7,6 +7,7 @@ import './index.scss';
 
 //Component Imports
 import NotFound from './components/content/not-found/Not-found';
+import MobileMenu from './components/layout/mobile-menu/Mobile-menu';
 import Header from './components/layout/header/Header';
 import Landing from './components/content/landing/Landing';
 import Home from './components/content/home/Home';
@@ -108,13 +109,14 @@ let handleStickyHeader = (initialOffSet) => {
     }
 }
 
-window.onscroll = () => {
-    handleStickyHeader(headerOffSet);
-};
+// window.onscroll = () => {
+//     handleStickyHeader(headerOffSet);
+// };
 
 const routes = (
     <BrowserRouter>
         <div>
+            <MobileMenu/>
             <Landing/>
             <Header
                 handleIconHover={handleIconHover} 
@@ -140,7 +142,7 @@ const routes = (
                         exact={true}
                     />
                     
-                    <Route
+                    {/* <Route
                         path="/" 
                         render={
                             (props) => 
@@ -161,10 +163,8 @@ const routes = (
                                 />
                         } 
                         exact={true}
-                    />
+                    /> */}
                 </div>
-                     
-                <Route component={NotFound}/>
             </Switch>
         </div>
     </BrowserRouter>

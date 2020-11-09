@@ -1,0 +1,57 @@
+.mobile-menu__wrapper {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+}
+
+.menu-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 5%;
+    width: 10vw;
+}
+
+.menu-close, .menu-list__wrapper {
+    display: none;
+}
+
+.menu-list__wrapper {
+    height: inherit;
+}
+
+.menu__site-icon {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.menu-list {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.menu-option {
+    padding: 2%;
+    margin: 2% 0;
+    display: flex;
+    align-items: center;
+}
+
+.menu-link {
+    color: $dark-gray;
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: bold;
+    border-bottom: 2px solid $dark-gray;
+}
+
+.currentSection {
+    background-color: $yellow;
+}

@@ -7,7 +7,7 @@ export default () => (
     <div className="landing-content" id="landing-content" data-aos="flip-right" data-aos-duration="1200">
         <img className="landing-content__img" src={SiteLogo}/>
         <h1 className="landing-text-wrapper" data-aos="fade" data-aos-duraction="1200" data-aos-delay="1000">     
-            <TextLoop className="animated-text">
+            <TextLoop className="animated-text" springConfig={{ stiffness: 360, damping: 25 }}>
                 <span> </span>
                 <span className="animated-text">Software</span>
                 <span className="animated-text">Creative</span>

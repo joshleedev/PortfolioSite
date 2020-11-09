@@ -1,8 +1,11 @@
 html {
+    width: 100%;
     font-size: 62.5%;
+    position: absolute;
 }
 
 body {
+    width: 100%;
     font-family: $body-font;
     font-size: $m-size;
     color: $dark-gray;
@@ -26,3 +29,16 @@ h2 {
     font-size: $l-size;
     letter-spacing: $s-size;
 }
+
+
+//break points - width
+//landscape mobile
+@media (min-width: 576px) {}
+// tablet
+@media (min-width: 768px) {}
+// laptop
+@media (min-width: 1200px) {}
+// PC
+@media (min-width: 1920px) {}
+// high res
+@media (min-width: 2160) {}

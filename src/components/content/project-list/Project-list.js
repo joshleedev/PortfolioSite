@@ -117,15 +117,12 @@ export default class ProjectList extends React.Component {
         
         return (
             <div id="projects-content" className="projects-section">
-                <div className="projects-content__featured" data-aos="fade-right" data-aos-duration="1200" data-aos-anchor-placement="top-center" data-aos-once="true">
-                    <div className="projects-content__featured__title-wrapper">
-                        <h2 className="projects-content__featured__title">FEATURED PROJECT</h2>
-                    </div>
+                <div className="projects-content__featured">
                     {this.state.featuredProject}
                 </div>
-                <div className="projects-content__heap" data-aos="fade-left" data-aos-duration="1200" data-aos-anchor-placement="top-center" data-aos-once="true">
+                <div className="projects-content__heap">
                     <div className="projects-content__heap__title-wrapper">
-                        <h2 className="projects-content__heap__title">THE PROJECT HEAP</h2>
+                        <h2 className="projects-content__heap__title">PROJECT HEAP</h2>
                     </div>
                     <form className="projects-content__heap__search-form">
                         <input
@@ -143,16 +140,30 @@ export default class ProjectList extends React.Component {
                             </div>
                         : 
                         <div className="carousel__wrapper">
-                            <Carousel
-                                slides={this.state.projectList}
-                                slidesPerScroll="3"
-                                slidesPerPage="3"
-                                arrowLeft={leftArrow}
-                                arrowLeftDisabled={leftArrowDisabled}
-                                arrowRight={rightArrow}
-                                arrowRightDisabled={rightArrowDisabled}
-                                addArrowClickHandler
-                            /> 
+                            <div className="carousel__mobile"> 
+                                <Carousel
+                                    plugins={[
+                                        'infinite'
+                                    ]}
+                                    slides={this.state.projectList}
+                                    slidesPerScroll="1"
+                                    slidesPerPage="1"
+                                    addArrowClickHandler
+                                    
+                                />
+                            </div>
+                            <div className="carousel"> 
+                                <Carousel
+                                    slides={this.state.projectList}
+                                    slidesPerScroll="3"
+                                    slidesPerPage="3"
+                                    arrowLeft={leftArrow}
+                                    arrowLeftDisabled={leftArrowDisabled}
+                                    arrowRight={rightArrow}
+                                    arrowRightDisabled={rightArrowDisabled}
+                                    addArrowClickHandler
+                                />
+                            </div>
                         </div>
                     }
                 </div>

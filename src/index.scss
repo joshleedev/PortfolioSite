@@ -2,6 +2,7 @@
 @import './components/layout/settings';
 @import './components/layout/base';
 @import './components/layout/header/header';
+@import './components//layout/mobile-menu/mobile-menu';
 @import './components/layout/footer/footer';
 @import './components/content/landing/landing';
 @import './components/content/home/home';
@@ -21,3 +22,6 @@
 .sticky-body {
     padding-top: 65px;
 }
+
+
+

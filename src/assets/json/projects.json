@@ -8,7 +8,7 @@
             "image": "https://s3.eu-west-2.amazonaws.com/joshlee.codes/images/Project+Test/esports-portfolio.png",
             "description":"A personal portfolio site created for a prominent Esports professional, developed using HTML/CSS and pure JavaScript. With a heavy focus on design and UX; resulting in a more unique and memorable experience.",
             "descriptionTwo":"The client requested the design to minimalistic with edited pre-existing high quality media content adding visual flare to the site.", 
-            "featured":"true"
+            "featured":"false"
         },
         {
             "id":"2",
@@ -28,7 +28,7 @@
             "image": "https://s3.eu-west-2.amazonaws.com/joshlee.codes/images/Project+Test/cube-solver.png",
             "description":"A project which tied together multiple areas which are of personal interest, using robotics for automation and mathematical or logical puzzles. As a child I was always intrigued by puzzles such as sudoku’s, the rules around them and the implications they can have when taken further - quickly indulging when given the opportunity to develop this project as my dissertation piece at university.",
             "descriptionTwo":"Other notable parts of development were in regards to image categorisation in the form of colour recognition and detection.",
-            "featured":"false"
+            "featured":"true"
         },
         {
             "id":"4",

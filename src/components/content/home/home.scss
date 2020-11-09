@@ -1,52 +1,75 @@
+.home-content__image-wrapper {
+    display: none;
+}
+
 .home-section {
-    padding: 22.75rem 20rem 22.75rem 20rem;
+    width: 80vw;
+    height: 70vh;
+    padding: 15vh 10vw;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    min-width: 76vw;
-    max-width: 76vw;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .home-content__text-block {
-    padding-top: $xl-size;
-    margin-left: $xxl-size;
-}
-
-.home-content__text-block__title__wrapper {
     display: flex;
-    flex-direction: row;
-}
-
-.home-content__text-block__title-highlight {
-    padding-left: $xs-size;
-    color: $yellow;
+    flex-direction: column;
 }
 
 .home-content__text-block__body {
     font-size: 2rem;
-    line-height: $l-size;
 }
 
-//Image Styling
-.home-content__image-wrapper {
-    position: relative;
-    text-align: center;
-    width: fit-content;
+@media (min-width: 2160) {
+    .home-section {
+        padding: 22.75rem 20rem 22.75rem 20rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        min-width: 76vw;
+        max-width: 76vw;
+    }
+    
+    .home-content__text-block {
+        padding-top: $xl-size;
+        margin-left: $xxl-size;
+    }
+    
+    .home-content__text-block__title__wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .home-content__text-block__title-highlight {
+        padding-left: $xs-size;
+        color: $yellow;
+    }
+    
+    .home-content__text-block__body {
+        font-size: 2rem;
+        line-height: $l-size;
+    }
+    
+    //Image Styling
+    .home-content__image-wrapper {
+        position: relative;
+        text-align: center;
+        width: fit-content;
+    }
+    
+    .home-content__image {
+        padding-top: $m-size;
+        padding-right: $xxl-size;
+        width: 100%;
+        height: auto;
+        justify-self: right;
+    }
+    
+    .carousel__wrapper-skills {
+        position: absolute;
+        top: 57%;
+        left: 37.5%;
+        padding: 0;
+        width: 25%;
+    }
 }
-
-.home-content__image {
-    padding-top: $m-size;
-    padding-right: $xxl-size;
-    width: 100%;
-    height: auto;
-    justify-self: right;
-}
-
-.carousel__wrapper-skills {
-    position: absolute;
-    top: 57%;
-    left: 37.5%;
-    padding: 0;
-    width: 25%;
-}
-
