@@ -1,6 +1,10 @@
 import React from 'react';
 import emailjs from 'emailjs-com';
 
+import GithubIcon from '../../../assets/imgs/SVG/social-icons/github/github.svg';
+import LinkedInIcon from '../../../assets/imgs/SVG/social-icons/linkedin/linkedin.svg';
+import EmailIcon from '../../../assets/imgs/SVG/social-icons/email/email.svg';
+
 export default class Contact extends React.Component {
     constructor(props) {
         super(props);
@@ -18,7 +22,6 @@ export default class Contact extends React.Component {
                     this.setState({feedbackMessage});
                 }
             }, (error) => {
-                //console.log(error.text);
                 let feedbackMessage = "Oops, something went wrong"
                 this.setState({feedbackMessage});
             });
@@ -28,14 +31,14 @@ export default class Contact extends React.Component {
     render() {
         return (
             <div id="contact-content" className="contact-section" >
-                <div className="contact__title__wrapper" data-aos="fade-right" data-aos-duration="1200" data-aos-anchor-placement="top-center" data-aos-once="true">
+                <div className="contact__title__wrapper">
                     <h2 className="contact__title">CONTACT</h2>
                 </div>
                 
-                <div className="contact-title__wrapper" data-aos="fade-right" data-aos-duration="1200" data-aos-anchor-placement="top-center" data-aos-once="true">
+                <div className="contact-title__wrapper">
                     <h3 className="contact-title">Feel free to get in touch.</h3>
                 </div>
-                <form className="contact-form"  onSubmit={this.sendEmail} encType="text/plain" data-aos="fade-left" data-aos-duration="1200" data-aos-anchor-placement="center-center" data-aos-once="true">
+                <form className="contact-form"  onSubmit={this.sendEmail} encType="text/plain">
                     <div className="contact-form__personal-info">
                         <input className="contact-form__personal-info__name" placeholder="Full name" required name="name" autoComplete="off"/>
                         <input className="contact-form__personal-info__email" placeholder="Email" required name="email" autoComplete="off"/>
@@ -45,6 +48,9 @@ export default class Contact extends React.Component {
                 </form>
                 <div className="feedback__wrapper">
                     <h3 className="feedback__message">{this.state.feedbackMessage}</h3>
+                </div>
+                <div>
+                
                 </div>
             </div>
         );

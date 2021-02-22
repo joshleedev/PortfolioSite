@@ -9,6 +9,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: $off-white;
 }
 
 .home-content__text-block {
@@ -71,5 +72,5 @@
         left: 37.5%;
         padding: 0;
         width: 25%;
-    }
+    } 
 }

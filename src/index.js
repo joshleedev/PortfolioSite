@@ -142,7 +142,7 @@ const routes = (
                         exact={true}
                     />
                     
-                    {/* <Route
+                    <Route
                         path="/" 
                         render={
                             (props) => 
@@ -163,7 +163,7 @@ const routes = (
                                 />
                         } 
                         exact={true}
-                    /> */}
+                    />
                 </div>
             </Switch>
         </div>

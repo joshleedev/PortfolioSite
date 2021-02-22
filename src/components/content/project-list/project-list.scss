@@ -11,18 +11,7 @@
 }
 
 .projects-content__heap__search-form {
-    width: 80%;
-    display: flex;
-    padding: 0 10vw 5vh 10vw;
-}
-
-.projects-content__heap__search-bar {
-    display: flex;
-    align-items: center;
-    width: 50%;
-    transition: width 0.4s ease-in-out;
-    text-align: center;
-    z-index: 1;
+    display: none;
 }
 
 .not-found {
